@@ -21,23 +21,32 @@ class NetworkTests: XCTestCase {
         super.tearDown()
     }
     
+    
+    
     func testSendAndReceivedNotNil(){
         //Arrange
         let hostToReach = "http://192.168.56.5:9200";
         let httpVerbeToUse = "GET";
-        let apiToUse = "/";
-        let bodyToSend = "";
+        let apiToUse = "/_alias";
+        let bodyToSend: NSString? = "";
         
-        let request = Request(host: hostToReach, httpVerb: httpVerbeToUse, api: apiToUse, body: bodyToSend);
-        
+        let request = Request<NSString>(host: hostToReach, httpVerb: httpVerbeToUse, api: apiToUse, body: bodyToSend!);
+        let expectation = expectationWithDescription("Getting data from elasticsearch")
         
         //Act
-        do{ 
+        do{
             let result = try Networks.SendAndReceiveDatas(request, callBack: {(data) in
-                print(data)
+                print(data);
+                expectation.fulfill();
             });
             //Assert
             XCTAssert(result != "", "Result is null !!");
+            
+            waitForExpectationsWithTimeout(1, handler: {error in
+                if let error = error{
+                    XCTFail("waitForExpectationsWithTimeout ERRORED: \(error)");
+                }
+            })
         }
         catch{
             print(error)

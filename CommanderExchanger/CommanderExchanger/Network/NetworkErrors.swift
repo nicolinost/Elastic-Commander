@@ -12,4 +12,5 @@ import Foundation
 enum NetworkError : ErrorType {
     case WrongUrl;
     case NoDatasReceived;
+    case NoBody;
 }
