@@ -25,12 +25,12 @@ class NetworkTests: XCTestCase {
     
     func testSendAndReceivedNotNil(){
         //Arrange
-        let hostToReach = "http://192.168.56.5:9200";
+        let hostToReach = "http://10.0.0.70:9200";
         let httpVerbeToUse = "GET";
-        let apiToUse = "/_alias";
-        let bodyToSend: NSString? = "";
+        let apiToUse = "/";
+        let bodyToSend: NSString? = nil;
         
-        let request = Request<NSString>(host: hostToReach, httpVerb: httpVerbeToUse, api: apiToUse, body: bodyToSend!);
+        let request = Request<NSString>(host: hostToReach, httpVerb: httpVerbeToUse, api: apiToUse, body: bodyToSend);
         let expectation = expectationWithDescription("Getting data from elasticsearch")
         
         //Act
