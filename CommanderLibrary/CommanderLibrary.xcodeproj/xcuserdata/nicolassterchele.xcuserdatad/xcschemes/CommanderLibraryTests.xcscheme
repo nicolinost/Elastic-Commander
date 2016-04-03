@@ -16,10 +16,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EB9E0EA51CA6A06E001FE100"
-               BuildableName = "CommanderExchangerTests.xctest"
-               BlueprintName = "CommanderExchangerTests"
-               ReferencedContainer = "container:CommanderExchanger.xcodeproj">
+               BlueprintIdentifier = "EB6E47281CB10B74002467C8"
+               BuildableName = "CommanderLibraryTests.xctest"
+               BlueprintName = "CommanderLibraryTests"
+               ReferencedContainer = "container:CommanderLibrary.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

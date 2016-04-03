@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import CommanderExchanger
+@testable import CommanderLibrary
 
 class NetworkTests: XCTestCase {
     
@@ -21,7 +21,7 @@ class NetworkTests: XCTestCase {
         super.tearDown()
     }
     
-    
+	
     
     func testSendAndReceivedNotNil(){
         //Arrange
@@ -39,8 +39,7 @@ class NetworkTests: XCTestCase {
                 print(data);
                 expectation.fulfill();
             });
-            //Assert
-            XCTAssert(result != "", "Result is null !!");
+			
             
             waitForExpectationsWithTimeout(1, handler: {error in
                 if let error = error{

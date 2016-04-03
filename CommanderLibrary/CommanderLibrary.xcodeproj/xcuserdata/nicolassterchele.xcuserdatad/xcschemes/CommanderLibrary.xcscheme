@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EB78429D1CA334F900EA090A"
-               BuildableName = "CommanderExchanger.framework"
-               BlueprintName = "CommanderExchanger"
-               ReferencedContainer = "container:CommanderExchanger.xcodeproj">
+               BlueprintIdentifier = "EB6E471E1CB10B74002467C8"
+               BuildableName = "CommanderLibrary.framework"
+               BlueprintName = "CommanderLibrary"
+               ReferencedContainer = "container:CommanderLibrary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EB6E47281CB10B74002467C8"
+               BuildableName = "CommanderLibraryTests.xctest"
+               BlueprintName = "CommanderLibraryTests"
+               ReferencedContainer = "container:CommanderLibrary.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "EB6E471E1CB10B74002467C8"
+            BuildableName = "CommanderLibrary.framework"
+            BlueprintName = "CommanderLibrary"
+            ReferencedContainer = "container:CommanderLibrary.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EB78429D1CA334F900EA090A"
-            BuildableName = "CommanderExchanger.framework"
-            BlueprintName = "CommanderExchanger"
-            ReferencedContainer = "container:CommanderExchanger.xcodeproj">
+            BlueprintIdentifier = "EB6E471E1CB10B74002467C8"
+            BuildableName = "CommanderLibrary.framework"
+            BlueprintName = "CommanderLibrary"
+            ReferencedContainer = "container:CommanderLibrary.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EB78429D1CA334F900EA090A"
-            BuildableName = "CommanderExchanger.framework"
-            BlueprintName = "CommanderExchanger"
-            ReferencedContainer = "container:CommanderExchanger.xcodeproj">
+            BlueprintIdentifier = "EB6E471E1CB10B74002467C8"
+            BuildableName = "CommanderLibrary.framework"
+            BlueprintName = "CommanderLibrary"
+            ReferencedContainer = "container:CommanderLibrary.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
