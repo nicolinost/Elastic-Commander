@@ -9,6 +9,6 @@
 import Foundation
 
 
-protocol SyntaxParsing {
+protocol QueryParsing {
 	<#requirements#>
 }
