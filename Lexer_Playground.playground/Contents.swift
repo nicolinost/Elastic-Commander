@@ -2,19 +2,32 @@
 
 import Cocoa
 
-var str = "PUT /kmcloud_percolator/_settings { \"query\" : \"query_string\" { } }"
+var str = "PUT /kmcloud_percolator/_settings { \"query\" : \"query_string\" : [{ },{ }] }"
 
+public enum	TokenType{
+	case HTTP_VERB
+	case STRING_LITERAL
+	case URL_ENDPOINT
+	case API
+	case L_CURLY_BRACKET
+	case R_CURLY_BRACKET
+	case COLON
+	case L_SQUARE_ARRAY
+	case R_SQUARE_ARRAY
+	case COMMA
+}
 
-class Token:NSObject{
-	let TYPE:String;
+public class Token:NSObject{
+	let TYPE:TokenType;
 	let VALUE:String;
 	
-	init(type:String,value:String){
+	init(type:TokenType,value:String){
 		self.TYPE = type;
 		self.VALUE = value;
 	}
 	
-	override var description: String{
+	
+	override public var description: String{
 		return "Type : \(TYPE) ; Value : \(VALUE)";
 	}
 }
@@ -59,7 +72,7 @@ func AdvanceChar(index:Int)->Int{
 }
 
 
-func FormTokenWithChars(startPoint:Int, endPoint:Int, lemme:String, TOKEN_TYPE:String, includeLast:Bool)-> Token{
+func FormTokenWithChars(startPoint:Int, endPoint:Int, lemme:String, TOKEN_TYPE:TokenType, includeLast:Bool)-> Token{
 	
 	let lexeme = GetStringByRange(startPoint, endPoint: endPoint, lemme: lemme, includeLast: includeLast);
 	
@@ -70,7 +83,7 @@ func LexStringLiteral(CurPtr:Int, lemme:String) -> (tokenResult:Token?,nextPtr:I
 	var i = AdvanceChar(CurPtr);
 	while (i < lemme.characters.count) {
 		if(lemme[lemme.startIndex.advancedBy(i)] == "\""){
-			let token = FormTokenWithChars(AdvanceChar(CurPtr), endPoint: i, lemme: lemme, TOKEN_TYPE: "STRING_LITERAL", includeLast: false);
+			let token = FormTokenWithChars(AdvanceChar(CurPtr), endPoint: i, lemme: lemme, TOKEN_TYPE: TokenType.STRING_LITERAL, includeLast: false);
 			return (token,AdvanceChar(i));
 		}
 		i += 1;
@@ -82,7 +95,7 @@ func LexIdentifier(CurPtr:Int, lemme:String) -> (tokenResult:Token?,nextPtr:Int)
 	var i = CurPtr;
 	while (i < lemme.characters.count) {
 		if(lemme[lemme.startIndex.advancedBy(i)] == " "){
-			let token = FormTokenWithChars(CurPtr, endPoint: i, lemme: lemme, TOKEN_TYPE: "HTTP_VERB", includeLast: false);
+			let token = FormTokenWithChars(CurPtr, endPoint: i, lemme: lemme, TOKEN_TYPE: TokenType.HTTP_VERB, includeLast: false);
 			return (token,AdvanceChar(i));
 		}
 		i += 1;
@@ -96,7 +109,7 @@ func LexUrlEndPoint( CurPtr:Int, lemme:String)-> (tokenResult:Token?,nextPtr:Int
 	while (i < lemme.characters.count) {
 		IsEndOfLemme = i+1 == lemme.characters.count;
 		if(lemme[lemme.startIndex.advancedBy(i)] == "/" || IsEndOfLemme){
-			let token = FormTokenWithChars(AdvanceChar(CurPtr), endPoint: (IsEndOfLemme) ? AdvanceChar(i) : i, lemme: lemme, TOKEN_TYPE: "URL_ENPOINT", includeLast: false);
+			let token = FormTokenWithChars(AdvanceChar(CurPtr), endPoint: (IsEndOfLemme) ? AdvanceChar(i) : i, lemme: lemme, TOKEN_TYPE: TokenType.URL_ENDPOINT, includeLast: false);
 			return (token,i);
 		}
 		i += 1;
@@ -110,7 +123,7 @@ func LexUrlApi(CurPtr:Int, lemme:String) -> (tokenResult:Token?,nextPtr:Int){
 	while (i < lemme.characters.count) {
 		IsEndOfLemme = i+1 == lemme.characters.count;
 		if(lemme[lemme.startIndex.advancedBy(i)] == "/" || IsEndOfLemme || IsWhiteSpace(lemme[lemme.startIndex.advancedBy(i)])){
-			let token = FormTokenWithChars(AdvanceChar(CurPtr), endPoint: (IsEndOfLemme) ? AdvanceChar(i) : i, lemme: lemme, TOKEN_TYPE: "API", includeLast: false);
+			let token = FormTokenWithChars(AdvanceChar(CurPtr), endPoint: (IsEndOfLemme) ? AdvanceChar(i) : i, lemme: lemme, TOKEN_TYPE: TokenType.API, includeLast: false);
 			return (token,(IsEndOfLemme) ? AdvanceChar(i) : i);
 		}
 		i += 1;
@@ -119,67 +132,92 @@ func LexUrlApi(CurPtr:Int, lemme:String) -> (tokenResult:Token?,nextPtr:Int){
 }
 
 
-var index = 0
-let unicode = String(str).unicodeScalars;
-while(index < str.characters.count)
-{
+func LexRawLine(line:String) -> Array<Token?> {
 	
-	let uniChar = unicode[unicode.startIndex.advancedBy(index)];
+	var tokens : Array<Token?> = Array();
 	
-	switch uniChar{
+	var index = 0
+	let unicode = String(line).unicodeScalars;
+	while(index < line.characters.count)
+	{
 		
-	case "{":
-		//print("IS L_CURLY_BRACKET")
-		let token = Token(type: "L_CURLY_BRACKET", value: "{");
-		print(token);
-		index += 1;
-	case "}":
-		//print("IS R_CURLY_BRACKET")
-		let token = Token(type:"R_CURLY_BRACKET",value: "}");
-		print(token);
-		index += 1;
-	case "\"":
-		//print("IS STRING LITERAL");
-		let tokenizeResult = LexStringLiteral(index, lemme: str);
-		print(tokenizeResult.tokenResult);
-		index = tokenizeResult.nextPtr;
-	case "/":
-		//print("IS SLASH");
-		if(unicode[unicode.startIndex.advancedBy(index+1)] != "_") {
-			let tokenizeResult = LexUrlEndPoint(index,lemme:str);
-			print(tokenizeResult.tokenResult);
+		let uniChar = unicode[unicode.startIndex.advancedBy(index)];
+		
+		switch uniChar{
+			
+		case "{":
+			//print("IS L_CURLY_BRACKET")
+			let token = Token(type: TokenType.L_CURLY_BRACKET, value: "{");
+			tokens.append(token);
+			index += 1;
+		case "}":
+			//print("IS R_CURLY_BRACKET")
+			let token = Token(type:TokenType.R_CURLY_BRACKET,value: "}");
+			tokens.append(token);
+			index += 1;
+		case "[":
+			print("IS L_SQUARE_BRACKET")
+			let token = Token(type:TokenType.L_SQUARE_ARRAY,value:"[");
+			tokens.append(token);
+			index+=1;
+		case "]":
+			print("IS R_SQUARE_BRACKET")
+			let token = Token(type: TokenType.R_SQUARE_ARRAY, value: "]");
+			tokens.append(token);
+			index+=1;
+		case ",":
+			print("IS COMMA")
+			let token = Token(type: TokenType.COMMA, value: ",");
+			tokens.append(token);
+			index+=1;
+		case "\"":
+			//print("IS STRING LITERAL");
+			let tokenizeResult = LexStringLiteral(index, lemme: str);
+			tokens.append(tokenizeResult.tokenResult);
 			index = tokenizeResult.nextPtr;
-		}
-		else {
+		case "/":
+			//print("IS SLASH");
+			if(unicode[unicode.startIndex.advancedBy(index+1)] != "_") {
+				let tokenizeResult = LexUrlEndPoint(index,lemme:str);
+				tokens.append(tokenizeResult.tokenResult);
+				index = tokenizeResult.nextPtr;
+			}
+			else {
+				let tokenizeResult = LexUrlApi(index, lemme: str);
+				tokens.append(tokenizeResult.tokenResult);
+				index = tokenizeResult.nextPtr;
+			}
+		case "_":
+			//print("IS UNDERSCORE");
 			let tokenizeResult = LexUrlApi(index, lemme: str);
-			print(tokenizeResult.tokenResult);
+			tokens.append(tokenizeResult.tokenResult);
 			index = tokenizeResult.nextPtr;
+		case "a","b","c","d","e","f","g","h","i","j","k","l","m",
+		     "n","o","p","q","r","s","t","u","v","w","x","y","z",
+		     "A","B","C","D","E","F","G","H","I","J","K","L","M",
+		     "N","O","P","Q","R","S","T","U","V","W","X","Y","Z":
+			//print("IS IDENTIFIER");
+			let tokenizeResult = LexIdentifier(index, lemme: str);
+			tokens.append(tokenizeResult.tokenResult);
+			index = tokenizeResult.nextPtr;
+		case ":":
+			let token = Token(type: TokenType.COLON, value: ":")
+			tokens.append(token);
+			index += 1;
+		default:
+			index += 1;
+			
 		}
-	case "_":
-		//print("IS UNDERSCORE");
-		let tokenizeResult = LexUrlApi(index, lemme: str);
-		print(tokenizeResult.tokenResult);
-		index = tokenizeResult.nextPtr;
-	case "a","b","c","d","e","f","g","h","i","j","k","l","m",
-	     "n","o","p","q","r","s","t","u","v","w","x","y","z",
-	     "A","B","C","D","E","F","G","H","I","J","K","L","M",
-	     "N","O","P","Q","R","S","T","U","V","W","X","Y","Z":
-		//print("IS IDENTIFIER");
-		let tokenizeResult = LexIdentifier(index, lemme: str);
-		print(tokenizeResult.tokenResult);
-		index = tokenizeResult.nextPtr;
-	case ":":
-		//print("IS COLON_LINKER")
-		let token = Token(type: "COLON_LINKER", value: ":")
-		print(token);
-		index += 1;
-	default:
-		//print("OTHER");
-		index += 1;
-		
 	}
 	
-	
-	
+	return tokens;
 }
+
+
+let tokenArray = LexRawLine(str);
+
+for token in tokenArray{
+	print(token)
+}
+
 
