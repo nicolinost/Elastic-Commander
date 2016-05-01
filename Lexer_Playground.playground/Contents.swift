@@ -2,7 +2,7 @@
 
 import Cocoa
 
-var str = "PUT /kmcloud_percolator/_settings { \"query\" : \"query_string\" : [{ },{ }] }"
+var str = "PUT _kmcloud_percolator/_settings/_bla { \"query\" : \"query_string\" : [{ \"filter\" : \"filtered\"} ,{ }] }"
 
 public enum	TokenType{
 	case HTTP_VERB
@@ -123,7 +123,7 @@ func LexUrlApi(CurPtr:Int, lemme:String) -> (tokenResult:Token?,nextPtr:Int){
 	while (i < lemme.characters.count) {
 		IsEndOfLemme = i+1 == lemme.characters.count;
 		if(lemme[lemme.startIndex.advancedBy(i)] == "/" || IsEndOfLemme || IsWhiteSpace(lemme[lemme.startIndex.advancedBy(i)])){
-			let token = FormTokenWithChars(AdvanceChar(CurPtr), endPoint: (IsEndOfLemme) ? AdvanceChar(i) : i, lemme: lemme, TOKEN_TYPE: TokenType.API, includeLast: false);
+			let token = FormTokenWithChars(CurPtr, endPoint: (IsEndOfLemme) ? AdvanceChar(i) : i, lemme: lemme, TOKEN_TYPE: TokenType.API, includeLast: false);
 			return (token,(IsEndOfLemme) ? AdvanceChar(i) : i);
 		}
 		i += 1;
@@ -156,17 +156,17 @@ func LexRawLine(line:String) -> Array<Token?> {
 			tokens.append(token);
 			index += 1;
 		case "[":
-			print("IS L_SQUARE_BRACKET")
+			//print("IS L_SQUARE_BRACKET")
 			let token = Token(type:TokenType.L_SQUARE_ARRAY,value:"[");
 			tokens.append(token);
 			index+=1;
 		case "]":
-			print("IS R_SQUARE_BRACKET")
+			//print("IS R_SQUARE_BRACKET")
 			let token = Token(type: TokenType.R_SQUARE_ARRAY, value: "]");
 			tokens.append(token);
 			index+=1;
 		case ",":
-			print("IS COMMA")
+			//print("IS COMMA")
 			let token = Token(type: TokenType.COMMA, value: ",");
 			tokens.append(token);
 			index+=1;
@@ -183,7 +183,7 @@ func LexRawLine(line:String) -> Array<Token?> {
 				index = tokenizeResult.nextPtr;
 			}
 			else {
-				let tokenizeResult = LexUrlApi(index, lemme: str);
+				let tokenizeResult = LexUrlApi(index+1, lemme: str);
 				tokens.append(tokenizeResult.tokenResult);
 				index = tokenizeResult.nextPtr;
 			}
