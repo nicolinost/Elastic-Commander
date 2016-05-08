@@ -1,0 +1,29 @@
+generic_json {
+ methods : [string]
+ url : url
+ params : [bodyParameter]
+}
+
+url {
+ path : [path]
+}
+
+path {
+ value : string
+ part: tuple (string, typePath_e)
+}
+
+enum typePath_e{
+list , ...
+}
+
+
+bodyParameter{
+value : string
+childParam : bodyParameter
+type : paramType 
+}
+
+enum paramType{
+boolean, number, ...
+}

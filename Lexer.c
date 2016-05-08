@@ -29,6 +29,8 @@ int main() {
 
 
 void LexRawLine(char *Ptr){
+
+  printf("%d",&Ptr);
   
   while(*Ptr != '\0'){
 
@@ -94,12 +96,8 @@ void LexRawLine(char *Ptr){
 }
 
 void LexIdentifier(char *Ptr){
+
   
-  while(*Ptr!='\0'){
-    if(*Ptr == ' '){
-      return 
-    }
-  }
 }
 
 

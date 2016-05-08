@@ -1,0 +1,17 @@
+//Sample for _search api
+{
+    "methods" : ["GET","POST"],
+   "url" : {
+	"path": [
+	    {
+		"value":"/{index}/_search",
+		"part":
+	    },
+	    {
+
+
+	    }
+	]
+    }
+
+}
