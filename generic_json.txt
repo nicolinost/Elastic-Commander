@@ -1,7 +1,7 @@
 generic_json {
  methods : [string]
  url : url
- params : [bodyParameter]
+ params : [bodyParameter] ?
 }
 
 url {
@@ -20,8 +20,8 @@ list , ...
 
 bodyParameter{
 value : string
-childParam : bodyParameter
-type : paramType 
+childParam : bodyParameter ? 
+type : paramType  
 }
 
 enum paramType{

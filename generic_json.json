@@ -1,17 +1,37 @@
 //Sample for _search api
 {
     "methods" : ["GET","POST"],
-   "url" : {
-	"path": [
+    "url" :
+    {
+	"path" :
+	[
 	    {
-		"value":"/{index}/_search",
-		"part":
+		"value" : "/{index}/_search",
+		"part" :
+		[
+		    {
+			"index" : "list"
+		    }
+		]
 	    },
 	    {
-
-
+		"value" : "/{index}/{type}/_search",
+		"part":
+		[
+		    {
+			"index" : "list"
+		    },
+		    {
+			"type" : "list"
+		    }
+		]
 	    }
 	]
+    },
+    "params":
+    {
+	"value" : "size",
+	"type" : "number"
     }
 
 }
