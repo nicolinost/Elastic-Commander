@@ -1,11 +1,14 @@
 generic_json {
  methods : [string]
  url : url
- params : [bodyParameter] ?
+ bodyParams : [bodyParameter] ?
 }
 
+
+/**** url part *****/
 url {
  path : [path]
+ urlParams : [urlParameter] ? 
 }
 
 path {
@@ -13,17 +16,106 @@ path {
  part: tuple (string, typePath_e)
 }
 
-enum typePath_e{
-list , ...
+urlParameter{
+name : string
+type : paramType
+acceptedValue : T ? 
 }
 
 
+/**** body part ****/
+
 bodyParameter{
-value : string
+name : string
 childParam : bodyParameter ? 
 type : paramType  
 }
 
+
+/**** common part ****/ 
+enum typePath_e{
+list , ...
+}
+
 enum paramType{
 boolean, number, ...
+}
+
+
+/**** SWIFT IMPLEMENTATION ****/
+
+
+
+public enum	httpVerb{
+	case GET, POST, PUT, DELETE
+}
+
+public enum typePath{
+	case list, number
+}
+
+public enum paramType{
+	case string, number, boolean
+}
+
+public class path{
+	let value : String;
+	let part : Dictionary<String,typePath>;
+	
+	init(value:String, part:Dictionary<String,typePath>){
+		self.value = value;
+		self.part = part;
+	}
+}
+
+public class urlParameter{
+	let name : String;
+	let type : paramType;
+	let acceptedValue : String?;
+	
+	init(name:String, type:paramType){
+		self.name = name;
+		self.type = type;
+		acceptedValue = nil;
+	}
+	
+	convenience init(name:String, type:paramType, acceptedValue:String){
+		self.init(name: name,type: type);
+	}
+}
+
+public class head{
+	let pattern : [path];
+	let params : [urlParameter]?;
+	
+	init(pattern:[path], params : [urlParameter]){
+		self.pattern = pattern;
+		self.params = params;
+	}
+}
+
+public class bodyParameter {
+	let name : String;
+	let type : paramType;
+	
+	init(name : String, type : paramType){
+		self.name = name;
+		self.type = type;
+	}
+}
+
+public class AbstractApi<T> {
+	typealias ApiType = T;
+	
+	internal let verb : httpVerb;
+	internal let url : head;
+	internal let body : [bodyParameter];
+	
+	
+	init(verb : httpVerb, header : head, body : [bodyParameter]){
+		self.verb = verb;
+		self.url = header;
+		self.body = body;
+	}
+	
 }

@@ -1,3 +1,4 @@
+
 //Sample for _search api
 {
     "methods" : ["GET","POST"],
@@ -26,11 +27,16 @@
 		    }
 		]
 	    }
-	]
+	],
+	"urlParams" :
+	{
+	    "name" : "q",
+	    "type" : "string"
+	}	
     },
     "params":
     {
-	"value" : "size",
+	"name" : "size",
 	"type" : "number"
     }
 
