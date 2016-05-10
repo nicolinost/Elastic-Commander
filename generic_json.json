@@ -1,9 +1,10 @@
+
 //Sample for _search api
 {
     "methods" : ["GET","POST"],
     "url" :
     {
-	"pattern" :
+	"path" :
 	[
 	    {
 		"value" : "/{index}/_search",
@@ -27,16 +28,17 @@
 		]
 	    }
 	],
-	"param" :
+	"urlParams" :
 	{
 	    "name" : "q",
 	    "type" : "string"
-	}
+	}	
     },
-    "body":
+    "params":
     {
 	"name" : "size",
 	"type" : "number"
     }
 
 }
+ 
