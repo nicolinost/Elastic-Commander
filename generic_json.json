@@ -3,7 +3,7 @@
     "methods" : ["GET","POST"],
     "url" :
     {
-	"path" :
+	"pattern" :
 	[
 	    {
 		"value" : "/{index}/_search",
@@ -27,13 +27,13 @@
 		]
 	    }
 	],
-	"params" :
+	"param" :
 	{
 	    "name" : "q",
 	    "type" : "string"
 	}
     },
-    "params":
+    "body":
     {
 	"name" : "size",
 	"type" : "number"

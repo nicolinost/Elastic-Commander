@@ -29,7 +29,7 @@ urlParameter{
 
 bodyParameter{
 name : string
-childParam : bodyParameter ? 
+childParam : bodyParameter ?
 type : paramType  
 }
 
