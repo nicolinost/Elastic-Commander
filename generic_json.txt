@@ -4,8 +4,11 @@ generic_json {
  params : [bodyParameter] ?
 }
 
+/**** Url Part ****/
+
 url {
  path : [path]
+ params : [urlParameter] ? 
 }
 
 path {
@@ -17,13 +20,25 @@ enum typePath_e{
 list , ...
 }
 
+urlParameter{
+ name : string
+ type : paramType
+}
+
+/**** body part ****/
 
 bodyParameter{
-value : string
+name : string
 childParam : bodyParameter ? 
 type : paramType  
 }
 
+
+/**** common part ****/
+
 enum paramType{
 boolean, number, ...
 }
+
+
+
