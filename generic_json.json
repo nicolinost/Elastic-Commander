@@ -28,11 +28,19 @@
 		]
 	    }
 	],
+<<<<<<< HEAD
 	"urlParams" :
 	{
 	    "name" : "q",
 	    "type" : "string"
 	}	
+=======
+	"params" :
+	{
+	    "name" : "q",
+	    "type" : "string"
+	}
+>>>>>>> 5ced17e7eda16cbab07f44efda1ab8c322b4c1cf
     },
     "params":
     {

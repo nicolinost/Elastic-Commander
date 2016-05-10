@@ -4,11 +4,19 @@ generic_json {
  bodyParams : [bodyParameter] ?
 }
 
+<<<<<<< HEAD
 
 /**** url part *****/
 url {
  path : [path]
  urlParams : [urlParameter] ? 
+=======
+/**** Url Part ****/
+
+url {
+ path : [path]
+ params : [urlParameter] ? 
+>>>>>>> 5ced17e7eda16cbab07f44efda1ab8c322b4c1cf
 }
 
 path {
@@ -22,6 +30,12 @@ type : paramType
 acceptedValue : T ? 
 }
 
+urlParameter{
+ name : string
+ type : paramType
+}
+
+/**** body part ****/
 
 /**** body part ****/
 
@@ -32,16 +46,21 @@ type : paramType
 }
 
 
+<<<<<<< HEAD
 /**** common part ****/ 
 enum typePath_e{
 list , ...
 }
+=======
+/**** common part ****/
+>>>>>>> 5ced17e7eda16cbab07f44efda1ab8c322b4c1cf
 
 enum paramType{
 boolean, number, ...
 }
 
 
+<<<<<<< HEAD
 /**** SWIFT IMPLEMENTATION ****/
 
 
@@ -119,3 +138,6 @@ public class AbstractApi<T> {
 	}
 	
 }
+=======
+
+>>>>>>> 5ced17e7eda16cbab07f44efda1ab8c322b4c1cf
