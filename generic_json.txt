@@ -109,13 +109,13 @@ public class AbstractApi<T> {
 	
 	internal let verb : httpVerb;
 	internal let url : head;
-	internal let body : [bodyParameter];
+	internal let bodyParameters : [bodyParameter];
 	
 	
-	init(verb : httpVerb, header : head, body : [bodyParameter]){
+	init(verb : httpVerb, header : head, bodyParameters : [bodyParameter]){
 		self.verb = verb;
 		self.url = header;
-		self.body = body;
+		self.bodyParameters = bodyParameters;
 	}
 	
 }
