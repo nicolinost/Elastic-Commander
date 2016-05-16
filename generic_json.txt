@@ -13,13 +13,13 @@ url {
 
 path {
  value : string
- part: tuple (string, typePath_e)
+ part: tuple (String, typePath_e)
 }
 
 urlParameter{
 name : string
 type : paramType
-acceptedValue : T ? 
+acceptedValue : String ? 
 }
 
 
@@ -27,7 +27,8 @@ acceptedValue : T ?
 
 bodyParameter{
 name : string
-childParam : bodyParameter ? 
+childParam : [bodyParameter] ?
+level : levelType
 type : paramType  
 }
 
@@ -39,6 +40,10 @@ list , ...
 
 enum paramType{
 boolean, number, ...
+}
+
+enum levelType{
+root, nested
 }
 
 
