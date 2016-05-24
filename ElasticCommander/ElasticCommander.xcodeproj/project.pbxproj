@@ -12,6 +12,10 @@
 		EB1849181CC18B720020E531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1849171CC18B720020E531 /* Assets.xcassets */; };
 		EB18491B1CC18B720020E531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1849191CC18B720020E531 /* Main.storyboard */; };
 		EB1849261CC18B720020E531 /* ElasticCommanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1849251CC18B720020E531 /* ElasticCommanderTests.swift */; };
+		EB90EBFD1CF4EC9500B58A39 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */; };
+		EB90EBFF1CF4EE6A00B58A39 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EBFE1CF4EE6A00B58A39 /* SplitViewController.swift */; };
+		EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */; };
+		EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		EB1849211CC18B720020E531 /* ElasticCommanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElasticCommanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1849251CC18B720020E531 /* ElasticCommanderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticCommanderTests.swift; sourceTree = "<group>"; };
 		EB1849271CC18B730020E531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		EB90EBFE1CF4EE6A00B58A39 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
+		EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 		EB1849121CC18B720020E531 /* ElasticCommander */ = {
 			isa = PBXGroup;
 			children = (
+				EB90EBFB1CF4EC6100B58A39 /* Controllers */,
 				EB1849131CC18B720020E531 /* AppDelegate.swift */,
 				EB1849151CC18B720020E531 /* ViewController.swift */,
 				EB1849171CC18B720020E531 /* Assets.xcassets */,
@@ -91,6 +100,17 @@
 				EB1849271CC18B730020E531 /* Info.plist */,
 			);
 			path = ElasticCommanderTests;
+			sourceTree = "<group>";
+		};
+		EB90EBFB1CF4EC6100B58A39 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */,
+				EB90EBFE1CF4EE6A00B58A39 /* SplitViewController.swift */,
+				EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */,
+				EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +214,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1849161CC18B720020E531 /* ViewController.swift in Sources */,
+				EB90EBFD1CF4EC9500B58A39 /* WindowController.swift in Sources */,
+				EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */,
 				EB1849141CC18B720020E531 /* AppDelegate.swift in Sources */,
+				EB90EBFF1CF4EE6A00B58A39 /* SplitViewController.swift in Sources */,
+				EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +403,7 @@
 				EB18492C1CC18B730020E531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB18492D1CC18B730020E531 /* Build configuration list for PBXNativeTarget "ElasticCommanderTests" */ = {
 			isa = XCConfigurationList;
@@ -387,6 +412,7 @@
 				EB18492F1CC18B730020E531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
