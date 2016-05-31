@@ -20,7 +20,7 @@ public class Request<T:AnyObject>{
 		}
 	}
 	
-	init(host:String,httpVerb:String, api:String, body:T?){
+	public init(host:String,httpVerb:String, api:String, body:T?){
 		self.endPoint = host;
 		self.httpVerb = httpVerb;
 		self.api = api;

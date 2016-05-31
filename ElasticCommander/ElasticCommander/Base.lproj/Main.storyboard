@@ -655,11 +655,10 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <toolbar key="toolbar" implicitIdentifier="1013A61F-4388-42D9-914A-A2BCBD210490" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="PsQ-c6-xjO">
+                        <value key="minSize" type="size" width="480" height="270"/>
+                        <toolbar key="toolbar" implicitIdentifier="1013A61F-4388-42D9-914A-A2BCBD210490" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="small" id="PsQ-c6-xjO">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="Bee-7M-n72"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="ygd-il-b4Q"/>
-                                <toolbarItem implicitItemIdentifier="AFE790DA-DCF0-4A55-81D7-3410CFE15B1D" label="" paletteLabel="I" id="Ysj-L9-7Ei">
+                                <toolbarItem implicitItemIdentifier="AFE790DA-DCF0-4A55-81D7-3410CFE15B1D" label="" paletteLabel="" id="Ysj-L9-7Ei" userLabel="Custom View">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="82" height="32"/>
                                     <size key="maxSize" width="82" height="32"/>
@@ -671,25 +670,24 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="test:" target="B8D-0N-5wS" id="gQq-aJ-AWW"/>
+                                            <action selector="SendAction:" target="B8D-0N-5wS" id="eCO-c9-J99"/>
                                         </connections>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="D6835561-A438-49AC-8C34-CBFF01564023" label="Custom View" paletteLabel="Custom View" id="E21-Zk-pZp">
+                                <toolbarItem implicitItemIdentifier="D6835561-A438-49AC-8C34-CBFF01564023" label="" paletteLabel="" id="E21-Zk-pZp">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="96" height="22"/>
                                     <size key="maxSize" width="188" height="22"/>
                                     <textField key="view" verticalHuggingPriority="750" id="4rZ-5Z-VaM">
                                         <rect key="frame" x="0.0" y="14" width="186" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bqW-q8-o66">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" placeholderString="Url" drawsBackground="YES" id="bqW-q8-o66">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="ibk-AU-xEi"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="RVi-1d-yjt"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="fhq-MS-BZZ"/>
                             </allowedToolbarItems>
@@ -697,7 +695,6 @@
                                 <toolbarItem reference="E21-Zk-pZp"/>
                                 <toolbarItem reference="Ysj-L9-7Ei"/>
                                 <toolbarItem reference="fhq-MS-BZZ"/>
-                                <toolbarItem reference="ibk-AU-xEi"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
@@ -811,7 +808,7 @@
                                     <rect key="frame" x="1" y="1" width="448" height="298"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="66E-ir-AwD">
+                                        <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="66E-ir-AwD">
                                             <rect key="frame" x="0.0" y="0.0" width="448" height="298"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -12,10 +12,29 @@ import Cocoa
 
 class SplitViewController : NSSplitViewController{
 	
-	
-	
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+	}
+	
+	private var queryViewController : QueryViewController{
+		let queryView = self.splitViewItems[0] as NSSplitViewItem
+		return queryView.viewController	as! QueryViewController
+	}
+	
+	private var queryResultViewController : QueryResultViewController{
+		let queryResultView = self.splitViewItems[1] as NSSplitViewItem
+		return queryResultView.viewController as! QueryResultViewController
+	}
+	
+	func getQuery() -> String? {
+		let query = queryViewController.getQuery()
+		if(query == ""){
+			return nil
+		}
+		return query
+	}
+	
+	func setQueryResult(result : String) {
+		queryResultViewController.setQueryResultText(result)
 	}
 }

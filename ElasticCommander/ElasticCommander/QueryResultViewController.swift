@@ -18,4 +18,10 @@ class QueryResultViewController : NSViewController{
 		super.viewDidLoad()
 	}
 	
+	func setQueryResultText(queryResultStr : String){
+		queryResult.string = queryResultStr
+		
+		queryResult.display()
+	}
+	
 }

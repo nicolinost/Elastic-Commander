@@ -8,6 +8,7 @@
 
 import Foundation
 import Cocoa
+import CommanderLibrary
 
 class WindowController : NSWindowController{
 	
@@ -18,7 +19,30 @@ class WindowController : NSWindowController{
 		super.windowDidLoad()
 	}
 	
-	@IBAction func test(sender: NSButton) {
+	var splitViewController : SplitViewController{
+		return self.contentViewController as! SplitViewController
+	}
+	
+	let processingQueue:NSOperationQueue = {
+		let result = NSOperationQueue()
+		result.maxConcurrentOperationCount = 4
+		return result
+	}()
+	
+	@IBAction func SendAction(sender: NSButton) {
+		
+			let request = Request<NSString>(host: self.urlToSend.stringValue, httpVerb: "GET", api: "/", body: self.splitViewController.getQuery());
+			
+			do{
+				try Networks.SendAndReceiveDatas(request, callBack: {(data) in
+					NSOperationQueue.mainQueue().addOperationWithBlock({
+						self.splitViewController.setQueryResult(data as! String)
+					})
+				})
+			}
+			catch{
+				print(error)
+			}
 		
 	}
 }

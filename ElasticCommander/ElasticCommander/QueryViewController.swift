@@ -18,4 +18,8 @@ class QueryViewController : NSViewController{
 		super.viewDidLoad()
 	}
 	
+	func getQuery() -> String {
+		return ((queryEditor.textStorage)?.string)!
+	}
+	
 }
