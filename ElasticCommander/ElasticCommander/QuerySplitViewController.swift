@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 
-class SplitViewController : NSSplitViewController{
+class QuerySplitViewController : NSSplitViewController{
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

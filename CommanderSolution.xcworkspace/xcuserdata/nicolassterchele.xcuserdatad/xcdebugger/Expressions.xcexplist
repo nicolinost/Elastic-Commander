@@ -3,6 +3,22 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "WindowController.HandleViewsVisibility(NSSegmentedControl) -&gt; ():WindowController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sender.segmentCount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ConnectionsMenuController.hideMe() -&gt; ():ConnectionsMenuController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.hidden">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "WindowController.SendAction(NSButton) -&gt; ():WindowController.swift">
       </ContextState>
    </ContextStates>

@@ -647,6 +647,40 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--General Split View Controller-->
+        <scene sceneID="Pdc-5a-Zkl">
+            <objects>
+                <splitViewController id="LJn-Id-y51" customClass="GeneralSplitViewController" customModule="ElasticCommander" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="V8D-Zj-oqQ"/>
+                        <splitViewItem id="7mg-Og-DMs"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="00r-xj-tz3">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </splitView>
+                    <connections>
+                        <segue destination="1Cc-4Y-NlT" kind="relationship" relationship="splitItems" id="jmy-M1-b2l"/>
+                        <segue destination="3mf-Pw-Pl1" kind="relationship" relationship="splitItems" id="KsM-PA-Hmb"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="CKP-cn-beQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-402" y="762"/>
+        </scene>
+        <!--Connections Menu Controller-->
+        <scene sceneID="JvX-gD-leF">
+            <objects>
+                <viewController id="1Cc-4Y-NlT" customClass="ConnectionsMenuController" customModule="ElasticCommander" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="teG-gX-Wdc">
+                        <rect key="frame" x="0.0" y="0.0" width="153" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="RdV-B2-LFB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796.5" y="1311"/>
+        </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
@@ -655,7 +689,7 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="480" height="270"/>
+                        <value key="minSize" type="size" width="900" height="800"/>
                         <toolbar key="toolbar" implicitIdentifier="1013A61F-4388-42D9-914A-A2BCBD210490" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="small" id="PsQ-c6-xjO">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="AFE790DA-DCF0-4A55-81D7-3410CFE15B1D" label="" paletteLabel="" id="Ysj-L9-7Ei" userLabel="Custom View">
@@ -690,32 +724,54 @@
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="RVi-1d-yjt"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="fhq-MS-BZZ"/>
+                                <toolbarItem implicitItemIdentifier="A875F6EE-1063-433F-B767-D95EDED463A1" label="" paletteLabel="Custom View" id="id0-2I-pFC">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="104" height="24"/>
+                                    <size key="maxSize" width="104" height="24"/>
+                                    <segmentedControl key="view" verticalHuggingPriority="750" id="oI2-b1-pl7">
+                                        <rect key="frame" x="0.0" y="14" width="104" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="selectAny" id="uH9-yx-hyi">
+                                            <font key="font" metaFont="system"/>
+                                            <segments>
+                                                <segment label="1" width="32"/>
+                                                <segment label="2" width="32" tag="1"/>
+                                                <segment label="3" width="32"/>
+                                            </segments>
+                                        </segmentedCell>
+                                        <connections>
+                                            <action selector="HandleViewsVisibility:" target="B8D-0N-5wS" id="tCX-vh-cJp"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="E21-Zk-pZp"/>
                                 <toolbarItem reference="Ysj-L9-7Ei"/>
                                 <toolbarItem reference="fhq-MS-BZZ"/>
+                                <toolbarItem reference="id0-2I-pFC"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
                     <connections>
                         <outlet property="urlToSend" destination="4rZ-5Z-VaM" id="p5C-Ho-JkH"/>
-                        <segue destination="3mf-Pw-Pl1" kind="relationship" relationship="window.shadowedContentViewController" id="Hhk-1o-x6H"/>
+                        <outlet property="viewSelector" destination="oI2-b1-pl7" id="QZc-3k-ztZ"/>
+                        <segue destination="LJn-Id-y51" kind="relationship" relationship="window.shadowedContentViewController" id="rCL-nu-A4w"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="450"/>
+            <point key="canvasLocation" x="65" y="284"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Query Split View Controller-->
         <scene sceneID="p81-PE-l54">
             <objects>
-                <splitViewController id="3mf-Pw-Pl1" customClass="SplitViewController" customModule="ElasticCommander" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController id="3mf-Pw-Pl1" customClass="QuerySplitViewController" customModule="ElasticCommander" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="jYN-DT-EG5"/>
                         <splitViewItem id="YXO-V5-tl4"/>
                     </splitViewItems>
-                    <splitView key="splitView" arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" id="BBp-I3-yaB">
+                    <splitView key="splitView" arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" id="BBp-I3-yaB">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
@@ -740,7 +796,7 @@
                 </splitViewController>
                 <customObject id="Lmp-ex-hfR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="1067"/>
+            <point key="canvasLocation" x="88" y="1311"/>
         </scene>
         <!--Query View Controller-->
         <scene sceneID="6vE-Xl-19T">
@@ -792,7 +848,7 @@
                 </viewController>
                 <customObject id="VHQ-Aw-RKJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="886"/>
+            <point key="canvasLocation" x="446" y="1846"/>
         </scene>
         <!--Query Result View Controller-->
         <scene sceneID="WET-7M-qMd">
@@ -844,7 +900,7 @@
                 </viewController>
                 <customObject id="z0h-T8-1D7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="1247"/>
+            <point key="canvasLocation" x="-326" y="1835"/>
         </scene>
     </scenes>
 </document>
