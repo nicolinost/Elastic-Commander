@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/nicolassterchele/Documents/Applications/Elastic-Commander/EditorCodeService.Interfaces/EditorCodeServiceInterfaces.xcodeproj">
+      location = "group:EditorCodeService.Interfaces/EditorCodeServiceInterfaces.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ElasticCommander/ElasticCommander.xcodeproj">

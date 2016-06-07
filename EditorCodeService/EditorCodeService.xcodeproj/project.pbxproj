@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		EB1849041CC0B42C0020E531 /* ParserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1849031CC0B42C0020E531 /* ParserUtils.swift */; };
-		EB193A481CC5426400237BFC /* Tokenizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB193A471CC5426400237BFC /* Tokenizing.swift */; };
+		EB1929B31D032EE500281E38 /* EditorCodeServiceInterfaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1929B21D032EE500281E38 /* EditorCodeServiceInterfaces.framework */; };
+		EB1929B51D03305900281E38 /* SyntaxUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1929B41D03305900281E38 /* SyntaxUtils.swift */; };
 		EB195FE01CB7799700F029AE /* EditorCodeService.h in Headers */ = {isa = PBXBuildFile; fileRef = EB195FDF1CB7799700F029AE /* EditorCodeService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB195FE71CB7799700F029AE /* EditorCodeService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB195FDC1CB7799700F029AE /* EditorCodeService.framework */; };
 		EB195FEC1CB7799700F029AE /* EditorCodeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB195FEB1CB7799700F029AE /* EditorCodeServiceTests.swift */; };
-		EB91DEE41CD3AF1900EA38B3 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91DEE31CD3AF1900EA38B3 /* TokenModel.swift */; };
-		EB91DEFF1CD3B33F00EA38B3 /* EditorCodeServiceInterfaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB91DEFE1CD3B33F00EA38B3 /* EditorCodeServiceInterfaces.framework */; };
-		EB91DF011CD3B35600EA38B3 /* LexicalAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91DF001CD3B35600EA38B3 /* LexicalAnalyzer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,16 +27,14 @@
 
 /* Begin PBXFileReference section */
 		EB1849031CC0B42C0020E531 /* ParserUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserUtils.swift; sourceTree = "<group>"; };
-		EB193A471CC5426400237BFC /* Tokenizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tokenizing.swift; path = Token/Tokenizing.swift; sourceTree = "<group>"; };
+		EB1929B21D032EE500281E38 /* EditorCodeServiceInterfaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EditorCodeServiceInterfaces.framework; path = "../../../../../Users/nicolassterchele/Library/Developer/Xcode/DerivedData/CommanderSolution-eukzphibnwpicfffmtdavlrdxzcf/Build/Products/Debug/EditorCodeServiceInterfaces.framework"; sourceTree = "<group>"; };
+		EB1929B41D03305900281E38 /* SyntaxUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxUtils.swift; sourceTree = "<group>"; };
 		EB195FDC1CB7799700F029AE /* EditorCodeService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EditorCodeService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB195FDF1CB7799700F029AE /* EditorCodeService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorCodeService.h; sourceTree = "<group>"; };
 		EB195FE11CB7799700F029AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB195FE61CB7799700F029AE /* EditorCodeServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditorCodeServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB195FEB1CB7799700F029AE /* EditorCodeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCodeServiceTests.swift; sourceTree = "<group>"; };
 		EB195FED1CB7799700F029AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB91DEE31CD3AF1900EA38B3 /* TokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenModel.swift; path = Token/TokenModel.swift; sourceTree = "<group>"; };
-		EB91DEFE1CD3B33F00EA38B3 /* EditorCodeServiceInterfaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EditorCodeServiceInterfaces.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CommanderSolution-eoxllcckvepbmlbbgzcqjaiarijz/Build/Products/Debug/EditorCodeServiceInterfaces.framework"; sourceTree = "<group>"; };
-		EB91DF001CD3B35600EA38B3 /* LexicalAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LexicalAnalyzer.swift; path = Lexical/LexicalAnalyzer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB91DEFF1CD3B33F00EA38B3 /* EditorCodeServiceInterfaces.framework in Frameworks */,
+				EB1929B31D032EE500281E38 /* EditorCodeServiceInterfaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +67,6 @@
 		EB193A461CC5423E00237BFC /* Token */ = {
 			isa = PBXGroup;
 			children = (
-				EB193A471CC5426400237BFC /* Tokenizing.swift */,
-				EB91DEE31CD3AF1900EA38B3 /* TokenModel.swift */,
 			);
 			name = Token;
 			sourceTree = "<group>";
@@ -80,7 +74,7 @@
 		EB195FD21CB7799700F029AE = {
 			isa = PBXGroup;
 			children = (
-				EB91DEFE1CD3B33F00EA38B3 /* EditorCodeServiceInterfaces.framework */,
+				EB1929B21D032EE500281E38 /* EditorCodeServiceInterfaces.framework */,
 				EB195FDE1CB7799700F029AE /* EditorCodeService */,
 				EB195FEA1CB7799700F029AE /* EditorCodeServiceTests */,
 				EB195FDD1CB7799700F029AE /* Products */,
@@ -106,6 +100,7 @@
 				EB195FDF1CB7799700F029AE /* EditorCodeService.h */,
 				EB195FE11CB7799700F029AE /* Info.plist */,
 				EB1849031CC0B42C0020E531 /* ParserUtils.swift */,
+				EB1929B41D03305900281E38 /* SyntaxUtils.swift */,
 			);
 			path = EditorCodeService;
 			sourceTree = "<group>";
@@ -129,7 +124,6 @@
 		EB91DEE51CD3AF8D00EA38B3 /* Lexical */ = {
 			isa = PBXGroup;
 			children = (
-				EB91DF001CD3B35600EA38B3 /* LexicalAnalyzer.swift */,
 			);
 			name = Lexical;
 			sourceTree = "<group>";
@@ -242,10 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1929B51D03305900281E38 /* SyntaxUtils.swift in Sources */,
 				EB1849041CC0B42C0020E531 /* ParserUtils.swift in Sources */,
-				EB193A481CC5426400237BFC /* Tokenizing.swift in Sources */,
-				EB91DEE41CD3AF1900EA38B3 /* TokenModel.swift in Sources */,
-				EB91DF011CD3B35600EA38B3 /* LexicalAnalyzer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,7 @@ class NetworkTests: XCTestCase {
 	
 	func testSendAndReceivedNotNil(){
 		//Arrange
-		let hostToReach = "http://192.168.1.16:9200";
+		let hostToReach = "http://10.0.0.5:9200";
 		let httpVerbeToUse = "GET";
 		let apiToUse = "/";
 		let bodyToSend: NSString? = nil;

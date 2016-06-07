@@ -11,9 +11,9 @@ import Foundation
 public class Networks {
 	
 	
-	public static func SendAndReceiveDatas<T>(request:Request<T>, callBack:(AnyObject)->()) throws  ->Void{
+	public static func SendAndReceiveDatas<T:AnyObject>(request:Request<T>, callBack:(AnyObject)->()) throws  ->Void{
 		guard let url = NSURL(string:request.completeUrl) else {
-			print("Error: cannot create URL"); 
+			print("Error: cannot create URL");
 			throw NetworkError.WrongUrl;
 		}
 		

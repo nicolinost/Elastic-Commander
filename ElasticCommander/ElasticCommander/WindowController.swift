@@ -18,6 +18,7 @@ class WindowController : NSWindowController{
 	
 	override func windowDidLoad() {
 		super.windowDidLoad()
+		self.window!.titleVisibility = .Hidden
 	}
 	
 	var splitViewController : GeneralSplitViewController{
@@ -35,33 +36,28 @@ class WindowController : NSWindowController{
 	
 	@IBAction func SendAction(sender: NSButton) {
 		
-		/*	let request = Request<NSString>(host: self.urlToSend.stringValue, httpVerb: "GET", api: "/", body: self.splitViewController.getQuery());
-		
+		let request = Request<NSString>(host: self.urlToSend.stringValue, httpVerb: "GET", api: "/", body: self.splitViewController.getQuery());
 		
 		do{
-		try Networks.SendAndReceiveDatas(request, callBack: {(data) in
-		NSOperationQueue.mainQueue().addOperationWithBlock({
-		self.splitViewController.setQueryResult(data as! String)
-		})
-		})
+			try Networks.SendAndReceiveDatas(request, callBack: {(data) in
+				NSOperationQueue.mainQueue().addOperationWithBlock({
+					self.splitViewController.querySplitView.setQueryResult((data as! String))
+				})
+			})
 		}
 		catch{
-		print(error)
+			print(error)
 		}
-		*/
+		
 	}
 	
 	
 	@IBAction func HandleViewsVisibility(sender: NSSegmentedControl) {
-		for i in 0..<sender.segmentCount {
-			if sender.isSelectedForSegment(i) {
-				switch i {
-				case 0:
-					splitViewController.HideMenu()
-				default:
-					splitViewController.ShowMenu()
-				}
-			}
+		if sender.isSelectedForSegment(0) {
+			splitViewController.ShowMenu()
+		}
+		else{
+			splitViewController.HideMenu()
 		}
 	}
 }

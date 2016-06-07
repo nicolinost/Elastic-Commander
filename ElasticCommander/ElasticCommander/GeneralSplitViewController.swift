@@ -34,13 +34,30 @@ class GeneralSplitViewController : NSSplitViewController{
 		return querySplitView.getQuery()
 	}
 	
+	func ToggleMenu() -> Void {
+		if splitView.isSubviewCollapsed(self.splitView.subviews[0]){
+			ShowMenu()
+		}else{
+			HideMenu()
+		}
+	}
+	
 	func HideMenu() -> Void {
-		menuConnections.hideMe()
+		let mainView = self.splitView.subviews[1]
+		let connectionMenuView = self.splitView.subviews[0]
+		connectionMenuView.hidden = true
+		let mainFrame = self.splitView.frame
+		
+		mainView.frame.size = NSMakeSize(mainFrame.size.width,mainFrame.size.height)
+		self.view.display()
 	}
 	
 	func ShowMenu() -> Void {
-		menuConnections.showMe()
+		let connectionMenuView = self.splitView.subviews[0]
+		connectionMenuView.hidden = false
+		
+		var connectionFrame = connectionMenuView.frame
+		connectionFrame.size = NSMakeSize(300, self.splitView.frame.size.height)
 	}
-	
 	
 }

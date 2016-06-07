@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -675,6 +675,20 @@
                     <view key="view" id="teG-gX-Wdc">
                         <rect key="frame" x="0.0" y="0.0" width="153" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uiy-9r-qbO">
+                                <rect key="frame" x="0.0" y="27" width="153" height="273"/>
+                                <connections>
+                                    <segue destination="2z5-EZ-aKa" kind="embed" id="oki-vh-4Ri"/>
+                                </connections>
+                            </containerView>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="PaS-fs-kDm">
+                                <rect key="frame" x="0.0" y="24" width="153" height="9"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="RdV-B2-LFB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -686,7 +700,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="ElasticCommander" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="900" height="800"/>
@@ -734,9 +748,9 @@
                                         <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="selectAny" id="uH9-yx-hyi">
                                             <font key="font" metaFont="system"/>
                                             <segments>
-                                                <segment label="1" width="32"/>
-                                                <segment label="2" width="32" tag="1"/>
-                                                <segment label="3" width="32"/>
+                                                <segment label="|" width="32" selected="YES"/>
+                                                <segment label="_" width="32" tag="1"/>
+                                                <segment label="|" width="32"/>
                                             </segments>
                                         </segmentedCell>
                                         <connections>
@@ -901,6 +915,18 @@
                 <customObject id="z0h-T8-1D7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-326" y="1835"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="01n-0Z-8c1">
+            <objects>
+                <viewController id="2z5-EZ-aKa" sceneMemberID="viewController">
+                    <view key="view" id="C7h-CG-rzy">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="zvK-S9-eWM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
