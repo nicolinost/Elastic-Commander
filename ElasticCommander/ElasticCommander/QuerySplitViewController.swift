@@ -34,6 +34,10 @@ class QuerySplitViewController : NSSplitViewController{
 		return query
 	}
 	
+	func setQuery(newQuery : String) -> Void{
+		queryViewController.setQuery(newQuery)
+	}
+	
 	func setQueryResult(result : String) {
 		queryResultViewController.setQueryResultText(result)
 	}

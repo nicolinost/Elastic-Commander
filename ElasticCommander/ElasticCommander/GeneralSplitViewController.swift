@@ -29,6 +29,9 @@ class GeneralSplitViewController : NSSplitViewController{
 		}
 	}
 	
+	func setQuery(newQuery : String) -> Void {
+		querySplitView.setQuery(newQuery)
+	}
 	
 	func getQuery() -> String? {
 		return querySplitView.getQuery()

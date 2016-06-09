@@ -41,4 +41,62 @@ public class SyntaxUtils{
 		return curlyBracketsCount == 0 && squareBracketsCount == 0
 	}
 	
+	
+	public static func AddTabs(nbTabs:Int) -> String {
+		var result : String = ""
+		
+		for _ in 0..<nbTabs {
+			result.appendContentsOf("\t")
+		}
+		
+		return result
+	}
+	
+	
+	public static func IndentJson(str:String)-> String{
+		
+		var index = 0
+		var offset = 0
+		let unicode = str.unicodeScalars
+		
+		var result : String = ""
+		
+		while(index < str.characters.count){
+			
+			let uniChar = unicode[unicode.startIndex.advancedBy(index)]
+			
+			switch uniChar {
+			case "{":
+				offset += 1
+				result.append(uniChar)
+				result.appendContentsOf("\n" + AddTabs(offset))
+				break
+			case "}":
+				offset -= 1
+				result.appendContentsOf("\n" + AddTabs(offset))
+				result.append(uniChar)
+				break
+			case ",":
+				result.append(uniChar)
+				result.appendContentsOf("\n" + AddTabs(offset))
+			case "[":
+				result.append(uniChar)
+				result.appendContentsOf("\n")
+				break
+			case "]":
+				result.appendContentsOf("\n")
+				result.append(uniChar)
+			default:
+				result.append(uniChar)
+				break
+			}
+			
+			index += 1
+			
+		}
+		
+		return result
+		
+	}
+	
 }

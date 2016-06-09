@@ -14,7 +14,8 @@
 		EB1849181CC18B720020E531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1849171CC18B720020E531 /* Assets.xcassets */; };
 		EB18491B1CC18B720020E531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1849191CC18B720020E531 /* Main.storyboard */; };
 		EB1849261CC18B720020E531 /* ElasticCommanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1849251CC18B720020E531 /* ElasticCommanderTests.swift */; };
-		EB5CBBA21CFACE0500F99F60 /* CommanderLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5CBBA11CFACE0500F99F60 /* CommanderLibrary.framework */; };
+		EB484F141D0A152500857C89 /* EditorCodeService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB484F131D0A152500857C89 /* EditorCodeService.framework */; };
+		EB484F161D0A152C00857C89 /* CommanderLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB484F151D0A152C00857C89 /* CommanderLibrary.framework */; };
 		EB90EBFD1CF4EC9500B58A39 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */; };
 		EB90EBFF1CF4EE6A00B58A39 /* QuerySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EBFE1CF4EE6A00B58A39 /* QuerySplitViewController.swift */; };
 		EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */; };
@@ -43,6 +44,8 @@
 		EB1849211CC18B720020E531 /* ElasticCommanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElasticCommanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1849251CC18B720020E531 /* ElasticCommanderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticCommanderTests.swift; sourceTree = "<group>"; };
 		EB1849271CC18B730020E531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB484F131D0A152500857C89 /* EditorCodeService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EditorCodeService.framework; path = "../../../../../Users/nicolassterchele/Library/Developer/Xcode/DerivedData/CommanderSolution-fxcvggphfetnrnclcuyhqmiaixbb/Build/Products/Debug/EditorCodeService.framework"; sourceTree = "<group>"; };
+		EB484F151D0A152C00857C89 /* CommanderLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommanderLibrary.framework; path = ../CommanderLibrary/build/Debug/CommanderLibrary.framework; sourceTree = "<group>"; };
 		EB5CBBA11CFACE0500F99F60 /* CommanderLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommanderLibrary.framework; path = "../../../../../Users/nicolassterchele/Library/Developer/Xcode/DerivedData/CommanderSolution-eukzphibnwpicfffmtdavlrdxzcf/Build/Products/Debug/CommanderLibrary.framework"; sourceTree = "<group>"; };
 		EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		EB90EBFE1CF4EE6A00B58A39 /* QuerySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuerySplitViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5CBBA21CFACE0500F99F60 /* CommanderLibrary.framework in Frameworks */,
+				EB484F161D0A152C00857C89 /* CommanderLibrary.framework in Frameworks */,
+				EB484F141D0A152500857C89 /* EditorCodeService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,8 @@
 		EB1849071CC18B720020E531 = {
 			isa = PBXGroup;
 			children = (
+				EB484F151D0A152C00857C89 /* CommanderLibrary.framework */,
+				EB484F131D0A152500857C89 /* EditorCodeService.framework */,
 				EB5CBBA11CFACE0500F99F60 /* CommanderLibrary.framework */,
 				EB1849121CC18B720020E531 /* ElasticCommander */,
 				EB1849241CC18B720020E531 /* ElasticCommanderTests */,

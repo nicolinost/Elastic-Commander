@@ -477,6 +477,7 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Text" id="d9c-me-L2H">
                                                 <items>
+                                                    <menuItem title="Indent Query" keyEquivalent="i" id="82E-QY-Ncq"/>
                                                     <menuItem title="Align Left" keyEquivalent="{" id="ZM1-6Q-yy1">
                                                         <connections>
                                                             <action selector="alignLeft:" target="Ady-hI-5gd" id="zUv-R1-uAa"/>
@@ -758,12 +759,29 @@
                                         </connections>
                                     </segmentedControl>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="F598AE47-E7E1-48B8-ADD9-D2BE44B806A4" label="Custom View" paletteLabel="Custom View" id="R97-xq-Z1G">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="82" height="32"/>
+                                    <size key="maxSize" width="82" height="32"/>
+                                    <button key="view" verticalHuggingPriority="750" id="bnX-5i-dws">
+                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wup-G2-8XB">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <action selector="IndentQuery:" target="B8D-0N-5wS" id="UAI-ta-Udw"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="E21-Zk-pZp"/>
                                 <toolbarItem reference="Ysj-L9-7Ei"/>
                                 <toolbarItem reference="fhq-MS-BZZ"/>
                                 <toolbarItem reference="id0-2I-pFC"/>
+                                <toolbarItem reference="R97-xq-Z1G"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>

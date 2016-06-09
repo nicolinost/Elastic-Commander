@@ -8,6 +8,7 @@
 
 import Foundation
 import Cocoa
+import EditorCodeService
 import CommanderLibrary
 
 class WindowController : NSWindowController{
@@ -60,4 +61,10 @@ class WindowController : NSWindowController{
 			splitViewController.HideMenu()
 		}
 	}
+	
+	@IBAction func IndentQuery(sender: AnyObject) {
+		let queryIndented = SyntaxUtils.IndentJson(self.splitViewController.getQuery()!)
+		self.splitViewController.setQuery(queryIndented)
+	}
+	
 }
