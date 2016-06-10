@@ -82,9 +82,15 @@ public class SyntaxUtils{
 			case "[":
 				result.append(uniChar)
 				result.appendContentsOf("\n")
+				if unicode[unicode.startIndex.advancedBy(index+1)] == "{"{
+					result.appendContentsOf(AddTabs(offset))
+				}
 				break
 			case "]":
 				result.appendContentsOf("\n")
+				if unicode[unicode.startIndex.advancedBy(index-1)] == "}"{
+					result.appendContentsOf(AddTabs(offset))
+				}
 				result.append(uniChar)
 			default:
 				result.append(uniChar)
