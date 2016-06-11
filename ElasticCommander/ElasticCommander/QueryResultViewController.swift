@@ -16,6 +16,9 @@ class QueryResultViewController : NSViewController{
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		let font = NSFont(name: "Menlo", size: 12)
+		queryResult.font = font
+		queryResult.textColor = NSColor.greenColor()
 	}
 	
 	func setQueryResultText(queryResultStr : String){

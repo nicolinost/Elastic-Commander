@@ -10,17 +10,27 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
+	
+	var myWindowController : WindowController?
+	
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
-		// Insert code here to initialize your application
+		//No code for the moment
 	}
-
+	
+	func applicationDidBecomeActive(notification: NSNotification) {
+		
+		let mainWindowController = NSApplication.sharedApplication().mainWindow?.windowController
+		myWindowController = mainWindowController as? WindowController
+		
+	}
+	
 	func applicationWillTerminate(aNotification: NSNotification) {
 		// Insert code here to tear down your application
 	}
-
-
+	
+	
+	@IBAction func indentQuery(sender: AnyObject) {
+		myWindowController?.IndentQuery(sender)
+	}
 }
 

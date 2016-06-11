@@ -10,7 +10,6 @@
 		EB09C0311CFEFD5200DF3ACE /* ConnectionsMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C0301CFEFD5200DF3ACE /* ConnectionsMenuController.swift */; };
 		EB09C0331CFF00C400DF3ACE /* GeneralSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09C0321CFF00C400DF3ACE /* GeneralSplitViewController.swift */; };
 		EB1849141CC18B720020E531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1849131CC18B720020E531 /* AppDelegate.swift */; };
-		EB1849161CC18B720020E531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1849151CC18B720020E531 /* ViewController.swift */; };
 		EB1849181CC18B720020E531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1849171CC18B720020E531 /* Assets.xcassets */; };
 		EB18491B1CC18B720020E531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1849191CC18B720020E531 /* Main.storyboard */; };
 		EB1849261CC18B720020E531 /* ElasticCommanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1849251CC18B720020E531 /* ElasticCommanderTests.swift */; };
@@ -37,7 +36,6 @@
 		EB09C0321CFF00C400DF3ACE /* GeneralSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralSplitViewController.swift; sourceTree = "<group>"; };
 		EB1849101CC18B720020E531 /* ElasticCommander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElasticCommander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1849131CC18B720020E531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB1849151CC18B720020E531 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB1849171CC18B720020E531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB18491A1CC18B720020E531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB18491C1CC18B720020E531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			children = (
 				EB90EBFB1CF4EC6100B58A39 /* Controllers */,
 				EB1849131CC18B720020E531 /* AppDelegate.swift */,
-				EB1849151CC18B720020E531 /* ViewController.swift */,
 				EB1849171CC18B720020E531 /* Assets.xcassets */,
 				EB1849191CC18B720020E531 /* Main.storyboard */,
 				EB18491C1CC18B720020E531 /* Info.plist */,
@@ -230,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB09C0331CFF00C400DF3ACE /* GeneralSplitViewController.swift in Sources */,
-				EB1849161CC18B720020E531 /* ViewController.swift in Sources */,
 				EB90EBFD1CF4EC9500B58A39 /* WindowController.swift in Sources */,
 				EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */,
 				EB1849141CC18B720020E531 /* AppDelegate.swift in Sources */,
