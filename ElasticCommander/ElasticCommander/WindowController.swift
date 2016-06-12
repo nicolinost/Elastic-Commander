@@ -27,14 +27,6 @@ class WindowController : NSWindowController{
 	}
 	
 	
-	
-	
-	let processingQueue:NSOperationQueue = {
-		let result = NSOperationQueue()
-		result.maxConcurrentOperationCount = 4
-		return result
-	}()
-	
 	@IBAction func SendAction(sender: NSButton) {
 		
 		let request = Request<NSString>(host: self.urlToSend.stringValue, httpVerb: "GET", api: "/", body: self.splitViewController.getQuery());

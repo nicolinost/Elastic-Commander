@@ -682,8 +682,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="Uiy-9r-qbO">
-                                <rect key="frame" x="0.0" y="21" width="302" height="279"/>
+                                <rect key="frame" x="0.0" y="25" width="302" height="275"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="2cw-x5-Wch"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="EYP-XR-vCB"/>
                                 </constraints>
                                 <connections>
@@ -691,34 +692,55 @@
                                 </connections>
                             </containerView>
                             <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-db-cEZ">
-                                <rect key="frame" x="0.0" y="18" width="302" height="5"/>
+                                <rect key="frame" x="0.0" y="22" width="302" height="5"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
                             </box>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hi3-z5-zYE">
-                                <rect key="frame" x="0.0" y="-1" width="302" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="7lj-ms-V0G"/>
-                                </constraints>
-                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="only" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RaE-7s-f1P">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-Nv-cRU">
+                                <rect key="frame" x="8" y="2" width="13" height="21"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NSd-CU-pw4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-nw-qXB">
+                                <rect key="frame" x="29" y="2" width="13" height="21"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ahh-Ou-pOH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-78-Nut">
+                                <rect key="frame" x="50" y="0.0" width="59" height="23"/>
+                                <popUpButtonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" preferredEdge="maxX" selectedItem="f08-A3-t7t" id="XKR-3A-OLd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="UGm-hY-bny">
+                                        <items>
+                                            <menuItem state="on" id="f08-A3-t7t"/>
+                                            <menuItem title="Item 2" id="kuV-Ss-lnn"/>
+                                            <menuItem title="Item 3" id="ov3-nd-pgy"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Hi3-z5-zYE" secondAttribute="bottom" id="0vS-bA-0U0"/>
+                            <constraint firstItem="LgA-Nv-cRU" firstAttribute="leading" secondItem="teG-gX-Wdc" secondAttribute="leading" constant="8" id="7gl-kn-Nz3"/>
                             <constraint firstAttribute="trailing" secondItem="Do0-db-cEZ" secondAttribute="trailing" id="G3y-qG-8Xu"/>
                             <constraint firstItem="Do0-db-cEZ" firstAttribute="leading" secondItem="teG-gX-Wdc" secondAttribute="leading" id="M0c-d7-18c"/>
+                            <constraint firstItem="5Tm-78-Nut" firstAttribute="top" secondItem="Do0-db-cEZ" secondAttribute="bottom" constant="2" id="O1o-dU-C6j"/>
+                            <constraint firstItem="5Tm-78-Nut" firstAttribute="leading" secondItem="v1e-nw-qXB" secondAttribute="trailing" constant="8" id="PzY-JI-MFV"/>
+                            <constraint firstItem="v1e-nw-qXB" firstAttribute="leading" secondItem="LgA-Nv-cRU" secondAttribute="trailing" constant="8" id="QCP-D1-PVH"/>
+                            <constraint firstItem="LgA-Nv-cRU" firstAttribute="top" secondItem="Do0-db-cEZ" secondAttribute="bottom" constant="2" id="Uus-dk-6pU"/>
                             <constraint firstAttribute="trailing" secondItem="Do0-db-cEZ" secondAttribute="trailing" id="V55-D5-Xop"/>
-                            <constraint firstAttribute="bottom" secondItem="Uiy-9r-qbO" secondAttribute="bottom" constant="21" id="VxR-xd-Poi"/>
+                            <constraint firstAttribute="bottom" secondItem="Uiy-9r-qbO" secondAttribute="bottom" constant="25" id="VxR-xd-Poi"/>
                             <constraint firstItem="Uiy-9r-qbO" firstAttribute="top" secondItem="teG-gX-Wdc" secondAttribute="top" id="bDo-i5-Q9e"/>
-                            <constraint firstItem="Hi3-z5-zYE" firstAttribute="leading" secondItem="teG-gX-Wdc" secondAttribute="leading" id="br6-Oi-ENT"/>
                             <constraint firstItem="Uiy-9r-qbO" firstAttribute="leading" secondItem="teG-gX-Wdc" secondAttribute="leading" id="cy1-kE-SJC"/>
-                            <constraint firstItem="Hi3-z5-zYE" firstAttribute="width" secondItem="teG-gX-Wdc" secondAttribute="width" id="lWp-Tk-JdZ"/>
                             <constraint firstAttribute="trailing" secondItem="Uiy-9r-qbO" secondAttribute="trailing" id="pAF-0r-OpB"/>
                             <constraint firstItem="Do0-db-cEZ" firstAttribute="top" secondItem="Uiy-9r-qbO" secondAttribute="bottom" id="pC6-9I-aCo"/>
+                            <constraint firstItem="v1e-nw-qXB" firstAttribute="top" secondItem="Do0-db-cEZ" secondAttribute="bottom" constant="2" id="tBQ-Kq-rd2"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1076,5 +1098,7 @@
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
 </document>
