@@ -18,7 +18,7 @@ class QueryViewController : NSViewController{
 		super.viewDidLoad()
 		let font = NSFont(name: "Menlo", size: 12)
 		queryEditor.font = font
-		queryEditor.textColor = NSColor.greenColor()
+		queryEditor.textColor = NSColor.blueColor()
 	}
 	
 	func setQuery(newQuery : String)->Void{
