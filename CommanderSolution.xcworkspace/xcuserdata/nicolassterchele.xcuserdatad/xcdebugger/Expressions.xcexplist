@@ -29,5 +29,13 @@
       <ContextState
          contextName = "WindowController.SendAction(NSButton) -&gt; ():WindowController.swift">
       </ContextState>
+      <ContextState
+         contextName = "WindowController.(IndentQuery(AnyObject) -&gt; ()).(closure #1):WindowController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.splitViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

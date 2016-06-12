@@ -63,8 +63,10 @@ class WindowController : NSWindowController{
 	}
 	
 	@IBAction func IndentQuery(sender: AnyObject) {
-		let queryIndented = SyntaxUtils.IndentJson(self.splitViewController.getQuery()!)
-		self.splitViewController.setQuery(queryIndented)
+		NSOperationQueue.mainQueue().addOperationWithBlock({
+			let queryIndented = SyntaxUtils.IndentJson(self.splitViewController.getQuery()!)
+			self.splitViewController.setQuery(queryIndented)
+		})
 	}
 	
 }
