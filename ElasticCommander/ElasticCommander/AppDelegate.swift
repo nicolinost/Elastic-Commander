@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	
 	@IBAction func indentQuery(sender: AnyObject) {
-		myWindowController!.IndentQuery(sender)
+		myWindowController?.IndentQuery(sender)
 	}
 }
 

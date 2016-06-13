@@ -698,40 +698,30 @@
                                 <font key="titleFont" metaFont="system"/>
                             </box>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-Nv-cRU">
-                                <rect key="frame" x="8" y="2" width="13" height="21"/>
+                                <rect key="frame" x="8" y="2" width="19" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="19" id="HVQ-AC-uL5"/>
+                                </constraints>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NSd-CU-pw4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-nw-qXB">
-                                <rect key="frame" x="29" y="2" width="13" height="21"/>
+                                <rect key="frame" x="35" y="2" width="19" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="19" id="2KD-ef-1yo"/>
+                                </constraints>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ahh-Ou-pOH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-78-Nut">
-                                <rect key="frame" x="50" y="0.0" width="59" height="23"/>
-                                <popUpButtonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" preferredEdge="maxX" selectedItem="f08-A3-t7t" id="XKR-3A-OLd">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="UGm-hY-bny">
-                                        <items>
-                                            <menuItem state="on" id="f08-A3-t7t"/>
-                                            <menuItem title="Item 2" id="kuV-Ss-lnn"/>
-                                            <menuItem title="Item 3" id="ov3-nd-pgy"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                            </popUpButton>
                         </subviews>
                         <constraints>
                             <constraint firstItem="LgA-Nv-cRU" firstAttribute="leading" secondItem="teG-gX-Wdc" secondAttribute="leading" constant="8" id="7gl-kn-Nz3"/>
                             <constraint firstAttribute="trailing" secondItem="Do0-db-cEZ" secondAttribute="trailing" id="G3y-qG-8Xu"/>
                             <constraint firstItem="Do0-db-cEZ" firstAttribute="leading" secondItem="teG-gX-Wdc" secondAttribute="leading" id="M0c-d7-18c"/>
-                            <constraint firstItem="5Tm-78-Nut" firstAttribute="top" secondItem="Do0-db-cEZ" secondAttribute="bottom" constant="2" id="O1o-dU-C6j"/>
-                            <constraint firstItem="5Tm-78-Nut" firstAttribute="leading" secondItem="v1e-nw-qXB" secondAttribute="trailing" constant="8" id="PzY-JI-MFV"/>
                             <constraint firstItem="v1e-nw-qXB" firstAttribute="leading" secondItem="LgA-Nv-cRU" secondAttribute="trailing" constant="8" id="QCP-D1-PVH"/>
                             <constraint firstItem="LgA-Nv-cRU" firstAttribute="top" secondItem="Do0-db-cEZ" secondAttribute="bottom" constant="2" id="Uus-dk-6pU"/>
                             <constraint firstAttribute="trailing" secondItem="Do0-db-cEZ" secondAttribute="trailing" id="V55-D5-Xop"/>
@@ -1073,7 +1063,7 @@
                                     </subviews>
                                     <nil key="backgroundColor"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="RXg-wY-dti">
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="RXg-wY-dti">
                                     <rect key="frame" x="1" y="283" width="448" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
