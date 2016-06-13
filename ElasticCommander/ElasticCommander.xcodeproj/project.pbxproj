@@ -19,6 +19,7 @@
 		EB90EBFF1CF4EE6A00B58A39 /* QuerySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EBFE1CF4EE6A00B58A39 /* QuerySplitViewController.swift */; };
 		EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */; };
 		EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */; };
+		EBA5DCEA1D0F19D9007D7A76 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA5DCE91D0F19D9007D7A76 /* Connection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EB90EBFE1CF4EE6A00B58A39 /* QuerySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuerySplitViewController.swift; sourceTree = "<group>"; };
 		EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
 		EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryResultViewController.swift; sourceTree = "<group>"; };
+		EBA5DCE91D0F19D9007D7A76 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Models/Connection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		EB1849121CC18B720020E531 /* ElasticCommander */ = {
 			isa = PBXGroup;
 			children = (
+				EBA5DCE81D0F19B2007D7A76 /* Models */,
 				EB90EBFB1CF4EC6100B58A39 /* Controllers */,
 				EB1849131CC18B720020E531 /* AppDelegate.swift */,
 				EB1849171CC18B720020E531 /* Assets.xcassets */,
@@ -124,6 +127,14 @@
 				EB09C0321CFF00C400DF3ACE /* GeneralSplitViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EBA5DCE81D0F19B2007D7A76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EBA5DCE91D0F19D9007D7A76 /* Connection.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				EB09C0331CFF00C400DF3ACE /* GeneralSplitViewController.swift in Sources */,
 				EB90EBFD1CF4EC9500B58A39 /* WindowController.swift in Sources */,
 				EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */,
+				EBA5DCEA1D0F19D9007D7A76 /* Connection.swift in Sources */,
 				EB1849141CC18B720020E531 /* AppDelegate.swift in Sources */,
 				EB09C0311CFEFD5200DF3ACE /* ConnectionsMenuController.swift in Sources */,
 				EB90EBFF1CF4EE6A00B58A39 /* QuerySplitViewController.swift in Sources */,
