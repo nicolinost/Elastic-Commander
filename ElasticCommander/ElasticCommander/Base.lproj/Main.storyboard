@@ -983,10 +983,10 @@
             </objects>
             <point key="canvasLocation" x="490" y="1847"/>
         </scene>
-        <!--View Controller-->
+        <!--Connection Outline View Controller-->
         <scene sceneID="01n-0Z-8c1">
             <objects>
-                <viewController id="2z5-EZ-aKa" sceneMemberID="viewController">
+                <viewController id="2z5-EZ-aKa" customClass="ConnectionOutlineViewController" customModule="ElasticCommander" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="C7h-CG-rzy">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -998,7 +998,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="idh-y9-wY5" viewBased="YES" indentationPerLevel="16" outlineTableColumn="5kt-Bp-B1J" id="21b-lN-sfe">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="282"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="276"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1017,7 +1017,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="xHs-AI-fFC">
+                                                        <tableCellView identifier="ConnectionName" id="xHs-AI-fFC">
                                                             <rect key="frame" x="1" y="1" width="445" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -1037,6 +1037,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="2z5-EZ-aKa" id="01x-MB-YZh"/>
+                                                <outlet property="delegate" destination="2z5-EZ-aKa" id="ux3-EX-sFH"/>
+                                            </connections>
                                         </outlineView>
                                     </subviews>
                                     <nil key="backgroundColor"/>
@@ -1050,7 +1054,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="idh-y9-wY5">
-                                    <rect key="frame" x="0.0" y="0.0" width="448" height="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="448" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>

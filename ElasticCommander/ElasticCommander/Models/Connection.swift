@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-class Connection: NSObject{
+public class Connection: NSObject{
 	
 	var name : String
 	

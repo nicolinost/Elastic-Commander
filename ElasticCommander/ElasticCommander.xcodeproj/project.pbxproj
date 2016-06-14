@@ -20,6 +20,7 @@
 		EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */; };
 		EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */; };
 		EBA5DCEA1D0F19D9007D7A76 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA5DCE91D0F19D9007D7A76 /* Connection.swift */; };
+		EBAC323B1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC323A1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +46,12 @@
 		EB1849271CC18B730020E531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB484F131D0A152500857C89 /* EditorCodeService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EditorCodeService.framework; path = "../../../../../Users/nicolassterchele/Library/Developer/Xcode/DerivedData/CommanderSolution-fxcvggphfetnrnclcuyhqmiaixbb/Build/Products/Debug/EditorCodeService.framework"; sourceTree = "<group>"; };
 		EB484F151D0A152C00857C89 /* CommanderLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommanderLibrary.framework; path = ../CommanderLibrary/build/Debug/CommanderLibrary.framework; sourceTree = "<group>"; };
-		EB5CBBA11CFACE0500F99F60 /* CommanderLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommanderLibrary.framework; path = "../../../../../Users/nicolassterchele/Library/Developer/Xcode/DerivedData/CommanderSolution-eukzphibnwpicfffmtdavlrdxzcf/Build/Products/Debug/CommanderLibrary.framework"; sourceTree = "<group>"; };
 		EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		EB90EBFE1CF4EE6A00B58A39 /* QuerySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuerySplitViewController.swift; sourceTree = "<group>"; };
 		EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
 		EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryResultViewController.swift; sourceTree = "<group>"; };
 		EBA5DCE91D0F19D9007D7A76 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Models/Connection.swift; sourceTree = "<group>"; };
+		EBAC323A1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionOutlineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +79,6 @@
 			children = (
 				EB484F151D0A152C00857C89 /* CommanderLibrary.framework */,
 				EB484F131D0A152500857C89 /* EditorCodeService.framework */,
-				EB5CBBA11CFACE0500F99F60 /* CommanderLibrary.framework */,
 				EB1849121CC18B720020E531 /* ElasticCommander */,
 				EB1849241CC18B720020E531 /* ElasticCommanderTests */,
 				EB1849111CC18B720020E531 /* Products */,
@@ -125,6 +125,7 @@
 				EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */,
 				EB09C0301CFEFD5200DF3ACE /* ConnectionsMenuController.swift */,
 				EB09C0321CFF00C400DF3ACE /* GeneralSplitViewController.swift */,
+				EBAC323A1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +243,7 @@
 				EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */,
 				EBA5DCEA1D0F19D9007D7A76 /* Connection.swift in Sources */,
 				EB1849141CC18B720020E531 /* AppDelegate.swift in Sources */,
+				EBAC323B1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift in Sources */,
 				EB09C0311CFEFD5200DF3ACE /* ConnectionsMenuController.swift in Sources */,
 				EB90EBFF1CF4EE6A00B58A39 /* QuerySplitViewController.swift in Sources */,
 				EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */,
