@@ -16,15 +16,16 @@ class ConnectionOutlineViewController : NSViewController, NSOutlineViewDelegate,
 	
 	override func viewDidLoad() {
 		connections.append(Connection(name: "localhost"))
+		connections.append(Connection(name: "index.kmcloud.kantarprod.com"))
 		super.viewDidLoad()
 	}
 	
 	func outlineView(outlineView: NSOutlineView, child index: Int, ofItem item: AnyObject?) -> AnyObject {
-		return connections[0]
+		return connections[index]
 	}
 	
 	func outlineView(outlineView: NSOutlineView, numberOfChildrenOfItem item: AnyObject?) -> Int {
-		return 1
+		return connections.count
 	}
 	
 	func outlineView(outlineView: NSOutlineView, isItemExpandable item: AnyObject) -> Bool {
