@@ -11,13 +11,17 @@ import Foundation
 public class Connection: NSObject{
 	
 	var name : String
+	var indices : [Index]?
+	
 	
 	override init(){
 		name = ""
+		indices = [Index]()
 		super.init()
 	}
 	
-	init(name : String){
+	init(name : String, indices : [Index]){
 		self.name = name
+		self.indices = indices
 	}
 }
