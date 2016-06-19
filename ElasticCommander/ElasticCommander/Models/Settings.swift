@@ -11,24 +11,35 @@ import Foundation
 class Settings : TreeNode{
 	
 	private var _name : String
-	var name : String {
+	@objc var name : String {
 		get{
 			return _name
 		}
 	}
-	var childrenCount: Int {
+	
+	@objc var childrenCount: Int {
 		get{
 		 return (childrenNodes != nil) ? childrenNodes!.count : 0
 		}
 	}
-	var childrenNodes: [TreeNode]?{
+	
+	private var nodes : [TreeNode]? = [TreeNode]()
+	@objc var childrenNodes: [TreeNode]?{
 		get{
-			return nil
+			return nodes
 		}
 	}
 	
 	init(name : String){
 		self._name = name
+	}
+	
+	@objc func addChildrenNode(node: TreeNode) {
+		nodes?.append(node)
+	}
+	
+	@objc func addChildrensNode(nodes: [TreeNode]) {
+		self.nodes?.appendContentsOf(nodes)
 	}
 	
 }

@@ -13,6 +13,7 @@
 		EB6E47421CB10C26002467C8 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E473F1CB10C26002467C8 /* NetworkUtils.swift */; };
 		EB6E47431CB10C26002467C8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E47401CB10C26002467C8 /* Request.swift */; };
 		EB6E47461CB10C3C002467C8 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E47451CB10C3C002467C8 /* NetworkTests.swift */; };
+		EB83E06A1D170A1E005CB24F /* ElasticsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83E0691D170A1E005CB24F /* ElasticsUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		EB6E473F1CB10C26002467C8 /* NetworkUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkUtils.swift; path = Network/NetworkUtils.swift; sourceTree = "<group>"; };
 		EB6E47401CB10C26002467C8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Network/Request.swift; sourceTree = "<group>"; };
 		EB6E47451CB10C3C002467C8 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkTests.swift; path = Network/NetworkTests.swift; sourceTree = "<group>"; };
+		EB83E0691D170A1E005CB24F /* ElasticsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElasticsUtils.swift; path = Elastics/ElasticsUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		EB6E47211CB10B74002467C8 /* CommanderLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				EB83E0681D1709B0005CB24F /* Elastics */,
 				EB6E473D1CB10C18002467C8 /* Network */,
 				EB6E47221CB10B74002467C8 /* CommanderLibrary.h */,
 				EB6E47241CB10B74002467C8 /* Info.plist */,
@@ -109,6 +112,14 @@
 				EB6E47451CB10C3C002467C8 /* NetworkTests.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		EB83E0681D1709B0005CB24F /* Elastics */ = {
+			isa = PBXGroup;
+			children = (
+				EB83E0691D170A1E005CB24F /* ElasticsUtils.swift */,
+			);
+			name = Elastics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 				EB6E47421CB10C26002467C8 /* NetworkUtils.swift in Sources */,
 				EB6E47431CB10C26002467C8 /* Request.swift in Sources */,
 				EB6E47411CB10C26002467C8 /* NetworkErrors.swift in Sources */,
+				EB83E06A1D170A1E005CB24F /* ElasticsUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

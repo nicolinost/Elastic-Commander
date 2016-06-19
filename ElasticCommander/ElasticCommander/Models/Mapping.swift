@@ -12,21 +12,21 @@ import Foundation
 class Mapping : TreeNode{
 	
 	private var _name = ""
-	var name : String {
+	@objc var name : String {
 		get {
 			return _name
 		}
 	}
-	var childrenCount: Int{
+	@objc var childrenCount: Int{
 		get{
 			return (childrenNodes != nil) ? childrenNodes!.count : 0
 		}
 	}
 	
-	private var nodes : [TreeNode]?
-	var childrenNodes: [TreeNode]?{
+	private var nodes : [TreeNode]? = [TreeNode]()
+	@objc var childrenNodes: [TreeNode]?{
 		get{
-			return nil
+			return nodes
 		}
 	}
 	
@@ -40,11 +40,11 @@ class Mapping : TreeNode{
 	}
 	
 	
-	func addNode(node : TreeNode) -> Void {
+	@objc func addChildrenNode(node: TreeNode) -> Void {
 		nodes?.append(node)
 	}
 	
-	func addNodes(nodes : [TreeNode]) -> Void{
+	@objc func addChildrensNode(nodes: [TreeNode]) -> Void{
 		self.nodes?.appendContentsOf(nodes)
 	}
 }

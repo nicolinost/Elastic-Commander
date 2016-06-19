@@ -10,7 +10,7 @@ import Foundation
 
 class Index : NSObject, TreeNode{
 	
-	private var _name : String
+	private var _name : String = ""
 	var name : String {
 		get{
 			return _name
@@ -33,16 +33,16 @@ class Index : NSObject, TreeNode{
 	}
 	
 	init(name:String){
+		super.init()
 		self._name = name
-		self.nodes.append(settings)
+		addChildrenNode(settings)
 	}
 	
 	convenience init(name : String, mapping : Mapping?){
 		self.init(name: name)
 		self.mapping = mapping
-		nodes.append(settings)
 		if mapping != nil {
-			nodes.append(mapping!)
+			addChildrenNode(mapping!)
 		}
 	}
 	
@@ -50,4 +50,15 @@ class Index : NSObject, TreeNode{
 		self.init(name:name, mapping: mapping)
 		self.aliasName = aliasName
 	}
+	
+	
+	func addChildrenNode(node: TreeNode) {
+		self.nodes.append(node)
+	}
+	
+	func addChildrensNode(nodes: [TreeNode]) {
+		self.nodes.appendContentsOf(nodes)
+	}
+	
+	
 }

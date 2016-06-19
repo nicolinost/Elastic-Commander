@@ -9,8 +9,12 @@
 import Foundation
 
 
-protocol TreeNode : AnyObject{
+@objc protocol TreeNode : AnyObject{
 	var name : String {get}
 	var childrenNodes : [TreeNode]? {get}
 	var childrenCount : Int {get}
+	
+	
+	func addChildrenNode(node : TreeNode) -> Void
+	func addChildrensNode(nodes : [TreeNode]) -> Void
 }

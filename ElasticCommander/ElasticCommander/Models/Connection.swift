@@ -23,14 +23,12 @@ public class Connection: NSObject, TreeNode{
 		}
 	}
 	
-	var indices : [Index]?
+	var indices : [Index]? = [Index]()
 	var childrenNodes: [TreeNode]?{
 		get {
 			return indices
 		}
 	}
-	
-	
 	
 	
 	override init(){
@@ -42,6 +40,14 @@ public class Connection: NSObject, TreeNode{
 	init(name : String, indices : [Index]?){
 		self._name = name
 		self.indices = indices
-		let test = indices as [TreeNode]?
 	}
+	
+	@objc func addChildrenNode(node: TreeNode) {
+		indices?.append(node as! Index)
+	}
+	
+	@objc func addChildrensNode(nodes: [TreeNode]) {
+		indices?.appendContentsOf(nodes as! [Index])
+	}
+	
 }
