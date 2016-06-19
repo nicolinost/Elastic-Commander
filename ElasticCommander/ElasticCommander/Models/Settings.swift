@@ -8,12 +8,27 @@
 
 import Foundation
 
-class Settings{
+class Settings : TreeNode{
 	
-	var name : String = ""
+	private var _name : String
+	var name : String {
+		get{
+			return _name
+		}
+	}
+	var childrenCount: Int {
+		get{
+		 return (childrenNodes != nil) ? childrenNodes!.count : 0
+		}
+	}
+	var childrenNodes: [TreeNode]?{
+		get{
+			return nil
+		}
+	}
 	
 	init(name : String){
-		self.name = name
+		self._name = name
 	}
 	
 }

@@ -23,6 +23,7 @@
 		EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */; };
 		EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */; };
 		EBA5DCEA1D0F19D9007D7A76 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA5DCE91D0F19D9007D7A76 /* Connection.swift */; };
+		EBAA7E511D15E74000552A36 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA7E501D15E74000552A36 /* TreeNode.swift */; };
 		EBAC323B1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC323A1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
 		EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryResultViewController.swift; sourceTree = "<group>"; };
 		EBA5DCE91D0F19D9007D7A76 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Models/Connection.swift; sourceTree = "<group>"; };
+		EBAA7E501D15E74000552A36 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeNode.swift; path = Tree/TreeNode.swift; sourceTree = "<group>"; };
 		EBAC323A1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionOutlineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 		EB1849121CC18B720020E531 /* ElasticCommander */ = {
 			isa = PBXGroup;
 			children = (
+				EBAA7E4F1D15E71700552A36 /* Tree */,
 				EBA5DCE81D0F19B2007D7A76 /* Models */,
 				EB90EBFB1CF4EC6100B58A39 /* Controllers */,
 				EB1849131CC18B720020E531 /* AppDelegate.swift */,
@@ -145,6 +148,14 @@
 				EB41D9B41D1266EC00FB7F20 /* Mapping.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		EBAA7E4F1D15E71700552A36 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				EBAA7E501D15E74000552A36 /* TreeNode.swift */,
+			);
+			name = Tree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 				EBAC323B1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift in Sources */,
 				EB09C0311CFEFD5200DF3ACE /* ConnectionsMenuController.swift in Sources */,
 				EB90EBFF1CF4EE6A00B58A39 /* QuerySplitViewController.swift in Sources */,
+				EBAA7E511D15E74000552A36 /* TreeNode.swift in Sources */,
 				EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
