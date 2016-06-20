@@ -8,6 +8,7 @@
 
 import Foundation
 import Cocoa
+import CommanderLibrary
 
 class ConnectionOutlineViewController : NSViewController, NSOutlineViewDelegate, NSOutlineViewDataSource{
 	

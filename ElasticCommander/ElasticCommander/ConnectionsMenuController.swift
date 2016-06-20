@@ -23,4 +23,7 @@ class ConnectionsMenuController : NSViewController{
 	func showMe(){
 		self.view.hidden = false
 	}
+	
+	@IBAction func showAddContextualMenu(sender: AnyObject) {
+	}
 }

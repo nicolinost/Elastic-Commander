@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ElasticCommander.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EB6E471E1CB10B74002467C8"
+               BuildableName = "CommanderLibrary.framework"
+               BlueprintName = "CommanderLibrary"
+               ReferencedContainer = "container:../CommanderLibrary/CommanderLibrary.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

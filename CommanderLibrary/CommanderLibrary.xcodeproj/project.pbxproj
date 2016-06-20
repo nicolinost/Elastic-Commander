@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB3DEF2E1D1866650080E2A8 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DEF2A1D1866650080E2A8 /* Connection.swift */; };
+		EB3DEF2F1D1866650080E2A8 /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DEF2B1D1866650080E2A8 /* Index.swift */; };
+		EB3DEF301D1866650080E2A8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DEF2C1D1866650080E2A8 /* Settings.swift */; };
+		EB3DEF311D1866650080E2A8 /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DEF2D1D1866650080E2A8 /* Mapping.swift */; };
+		EB3DEF341D1866EA0080E2A8 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3DEF331D1866EA0080E2A8 /* TreeNode.swift */; };
 		EB6E47231CB10B74002467C8 /* CommanderLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6E47221CB10B74002467C8 /* CommanderLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB6E472A1CB10B74002467C8 /* CommanderLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB6E471F1CB10B74002467C8 /* CommanderLibrary.framework */; };
 		EB6E47411CB10C26002467C8 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6E473E1CB10C26002467C8 /* NetworkErrors.swift */; };
@@ -27,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB3DEF2A1D1866650080E2A8 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		EB3DEF2B1D1866650080E2A8 /* Index.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
+		EB3DEF2C1D1866650080E2A8 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		EB3DEF2D1D1866650080E2A8 /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
+		EB3DEF331D1866EA0080E2A8 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		EB6E471F1CB10B74002467C8 /* CommanderLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommanderLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6E47221CB10B74002467C8 /* CommanderLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommanderLibrary.h; sourceTree = "<group>"; };
 		EB6E47241CB10B74002467C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +68,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB3DEF291D18663C0080E2A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB3DEF2A1D1866650080E2A8 /* Connection.swift */,
+				EB3DEF2B1D1866650080E2A8 /* Index.swift */,
+				EB3DEF2C1D1866650080E2A8 /* Settings.swift */,
+				EB3DEF2D1D1866650080E2A8 /* Mapping.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EB3DEF321D1866DF0080E2A8 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				EB3DEF331D1866EA0080E2A8 /* TreeNode.swift */,
+			);
+			name = Tree;
+			sourceTree = "<group>";
+		};
 		EB6E47151CB10B74002467C8 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +108,8 @@
 		EB6E47211CB10B74002467C8 /* CommanderLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				EB3DEF321D1866DF0080E2A8 /* Tree */,
+				EB3DEF291D18663C0080E2A8 /* Models */,
 				EB83E0681D1709B0005CB24F /* Elastics */,
 				EB6E473D1CB10C18002467C8 /* Network */,
 				EB6E47221CB10B74002467C8 /* CommanderLibrary.h */,
@@ -232,6 +263,11 @@
 			files = (
 				EB6E47421CB10C26002467C8 /* NetworkUtils.swift in Sources */,
 				EB6E47431CB10C26002467C8 /* Request.swift in Sources */,
+				EB3DEF341D1866EA0080E2A8 /* TreeNode.swift in Sources */,
+				EB3DEF2F1D1866650080E2A8 /* Index.swift in Sources */,
+				EB3DEF2E1D1866650080E2A8 /* Connection.swift in Sources */,
+				EB3DEF311D1866650080E2A8 /* Mapping.swift in Sources */,
+				EB3DEF301D1866650080E2A8 /* Settings.swift in Sources */,
 				EB6E47411CB10C26002467C8 /* NetworkErrors.swift in Sources */,
 				EB83E06A1D170A1E005CB24F /* ElasticsUtils.swift in Sources */,
 			);

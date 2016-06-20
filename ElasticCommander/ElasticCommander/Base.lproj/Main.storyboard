@@ -706,6 +706,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="showAddContextualMenu:" target="1Cc-4Y-NlT" id="7FV-5d-ifW"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-nw-qXB">
                                 <rect key="frame" x="35" y="2" width="19" height="21"/>

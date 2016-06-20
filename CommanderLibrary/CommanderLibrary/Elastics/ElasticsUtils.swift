@@ -10,8 +10,8 @@ import Foundation
 
 public class ElasticsUtils{
 	
-	public static func getAllIndexFromElastic(host : String) -> [Index]{
-		
-	} 
+	public static func getAllIndexFromElastic(host : String) -> [Index]?{
+		return nil
+	}
 	
 }

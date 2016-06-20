@@ -13,17 +13,12 @@
 		EB1849181CC18B720020E531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1849171CC18B720020E531 /* Assets.xcassets */; };
 		EB18491B1CC18B720020E531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1849191CC18B720020E531 /* Main.storyboard */; };
 		EB1849261CC18B720020E531 /* ElasticCommanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1849251CC18B720020E531 /* ElasticCommanderTests.swift */; };
-		EB41D9AF1D12658F00FB7F20 /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB41D9AE1D12658F00FB7F20 /* Index.swift */; };
-		EB41D9B31D1266D800FB7F20 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB41D9B21D1266D800FB7F20 /* Settings.swift */; };
-		EB41D9B51D1266EC00FB7F20 /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB41D9B41D1266EC00FB7F20 /* Mapping.swift */; };
-		EB484F141D0A152500857C89 /* EditorCodeService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB484F131D0A152500857C89 /* EditorCodeService.framework */; };
-		EB484F161D0A152C00857C89 /* CommanderLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB484F151D0A152C00857C89 /* CommanderLibrary.framework */; };
+		EB3DEF361D1867A60080E2A8 /* CommanderLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3DEF351D1867A60080E2A8 /* CommanderLibrary.framework */; };
+		EB3DEF381D1867D70080E2A8 /* EditorCodeService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3DEF371D1867D70080E2A8 /* EditorCodeService.framework */; };
 		EB90EBFD1CF4EC9500B58A39 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */; };
 		EB90EBFF1CF4EE6A00B58A39 /* QuerySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EBFE1CF4EE6A00B58A39 /* QuerySplitViewController.swift */; };
 		EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */; };
 		EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */; };
-		EBA5DCEA1D0F19D9007D7A76 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA5DCE91D0F19D9007D7A76 /* Connection.swift */; };
-		EBAA7E511D15E74000552A36 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA7E501D15E74000552A36 /* TreeNode.swift */; };
 		EBAC323B1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAC323A1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,17 +43,12 @@
 		EB1849211CC18B720020E531 /* ElasticCommanderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElasticCommanderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1849251CC18B720020E531 /* ElasticCommanderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElasticCommanderTests.swift; sourceTree = "<group>"; };
 		EB1849271CC18B730020E531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB41D9AE1D12658F00FB7F20 /* Index.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Index.swift; path = Models/Index.swift; sourceTree = "<group>"; };
-		EB41D9B21D1266D800FB7F20 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = Models/Settings.swift; sourceTree = "<group>"; };
-		EB41D9B41D1266EC00FB7F20 /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mapping.swift; path = Models/Mapping.swift; sourceTree = "<group>"; };
-		EB484F131D0A152500857C89 /* EditorCodeService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EditorCodeService.framework; path = "../../../../../Users/nicolassterchele/Library/Developer/Xcode/DerivedData/CommanderSolution-fxcvggphfetnrnclcuyhqmiaixbb/Build/Products/Debug/EditorCodeService.framework"; sourceTree = "<group>"; };
-		EB484F151D0A152C00857C89 /* CommanderLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommanderLibrary.framework; path = ../CommanderLibrary/build/Debug/CommanderLibrary.framework; sourceTree = "<group>"; };
+		EB3DEF351D1867A60080E2A8 /* CommanderLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommanderLibrary.framework; path = "../../../../../Users/nicolassterchele/Library/Developer/Xcode/DerivedData/CommanderSolution-fxcvggphfetnrnclcuyhqmiaixbb/Build/Products/Debug/CommanderLibrary.framework"; sourceTree = "<group>"; };
+		EB3DEF371D1867D70080E2A8 /* EditorCodeService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EditorCodeService.framework; path = ../EditorCodeService/build/Debug/EditorCodeService.framework; sourceTree = "<group>"; };
 		EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		EB90EBFE1CF4EE6A00B58A39 /* QuerySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuerySplitViewController.swift; sourceTree = "<group>"; };
 		EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
 		EB90EC021CF4EF9F00B58A39 /* QueryResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryResultViewController.swift; sourceTree = "<group>"; };
-		EBA5DCE91D0F19D9007D7A76 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Models/Connection.swift; sourceTree = "<group>"; };
-		EBAA7E501D15E74000552A36 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeNode.swift; path = Tree/TreeNode.swift; sourceTree = "<group>"; };
 		EBAC323A1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionOutlineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,8 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB484F161D0A152C00857C89 /* CommanderLibrary.framework in Frameworks */,
-				EB484F141D0A152500857C89 /* EditorCodeService.framework in Frameworks */,
+				EB3DEF381D1867D70080E2A8 /* EditorCodeService.framework in Frameworks */,
+				EB3DEF361D1867A60080E2A8 /* CommanderLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +75,8 @@
 		EB1849071CC18B720020E531 = {
 			isa = PBXGroup;
 			children = (
-				EB484F151D0A152C00857C89 /* CommanderLibrary.framework */,
-				EB484F131D0A152500857C89 /* EditorCodeService.framework */,
+				EB3DEF371D1867D70080E2A8 /* EditorCodeService.framework */,
+				EB3DEF351D1867A60080E2A8 /* CommanderLibrary.framework */,
 				EB1849121CC18B720020E531 /* ElasticCommander */,
 				EB1849241CC18B720020E531 /* ElasticCommanderTests */,
 				EB1849111CC18B720020E531 /* Products */,
@@ -105,7 +95,6 @@
 		EB1849121CC18B720020E531 /* ElasticCommander */ = {
 			isa = PBXGroup;
 			children = (
-				EBAA7E4F1D15E71700552A36 /* Tree */,
 				EBA5DCE81D0F19B2007D7A76 /* Models */,
 				EB90EBFB1CF4EC6100B58A39 /* Controllers */,
 				EB1849131CC18B720020E531 /* AppDelegate.swift */,
@@ -142,20 +131,8 @@
 		EBA5DCE81D0F19B2007D7A76 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EBA5DCE91D0F19D9007D7A76 /* Connection.swift */,
-				EB41D9AE1D12658F00FB7F20 /* Index.swift */,
-				EB41D9B21D1266D800FB7F20 /* Settings.swift */,
-				EB41D9B41D1266EC00FB7F20 /* Mapping.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		EBAA7E4F1D15E71700552A36 /* Tree */ = {
-			isa = PBXGroup;
-			children = (
-				EBAA7E501D15E74000552A36 /* TreeNode.swift */,
-			);
-			name = Tree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,15 +238,10 @@
 				EB09C0331CFF00C400DF3ACE /* GeneralSplitViewController.swift in Sources */,
 				EB90EBFD1CF4EC9500B58A39 /* WindowController.swift in Sources */,
 				EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */,
-				EBA5DCEA1D0F19D9007D7A76 /* Connection.swift in Sources */,
-				EB41D9B51D1266EC00FB7F20 /* Mapping.swift in Sources */,
-				EB41D9AF1D12658F00FB7F20 /* Index.swift in Sources */,
 				EB1849141CC18B720020E531 /* AppDelegate.swift in Sources */,
-				EB41D9B31D1266D800FB7F20 /* Settings.swift in Sources */,
 				EBAC323B1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift in Sources */,
 				EB09C0311CFEFD5200DF3ACE /* ConnectionsMenuController.swift in Sources */,
 				EB90EBFF1CF4EE6A00B58A39 /* QuerySplitViewController.swift in Sources */,
-				EBAA7E511D15E74000552A36 /* TreeNode.swift in Sources */,
 				EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

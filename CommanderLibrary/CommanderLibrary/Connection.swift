@@ -11,42 +11,42 @@ import Foundation
 public class Connection: NSObject, TreeNode{
 	
 	private var _name : String
-	var name : String {
+	public var name : String {
 		get {
 			return _name
 		}
 	}
 	
-	var childrenCount: Int{
+	public var childrenCount: Int{
 		get{
 			return (childrenNodes != nil) ? childrenNodes!.count : 0
 		}
 	}
 	
 	var indices : [Index]? = [Index]()
-	var childrenNodes: [TreeNode]?{
+	public var childrenNodes: [TreeNode]?{
 		get {
 			return indices
 		}
 	}
 	
 	
-	override init(){
+	public override init(){
 		_name = ""
 		indices = [Index]?()
 		super.init()
 	}
 	
-	init(name : String, indices : [Index]?){
+	public init(name : String, indices : [Index]?){
 		self._name = name
 		self.indices = indices
 	}
 	
-	@objc func addChildrenNode(node: TreeNode) {
+	@objc public func addChildrenNode(node: TreeNode) {
 		indices?.append(node as! Index)
 	}
 	
-	@objc func addChildrensNode(nodes: [TreeNode]) {
+	@objc public func addChildrensNode(nodes: [TreeNode]) {
 		indices?.appendContentsOf(nodes as! [Index])
 	}
 	

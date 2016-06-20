@@ -8,37 +8,37 @@
 
 import Foundation
 
-class Settings : TreeNode{
+public class Settings : TreeNode{
 	
 	private var _name : String
-	@objc var name : String {
+	@objc public  var name : String {
 		get{
 			return _name
 		}
 	}
 	
-	@objc var childrenCount: Int {
+	@objc public var childrenCount: Int {
 		get{
 		 return (childrenNodes != nil) ? childrenNodes!.count : 0
 		}
 	}
 	
 	private var nodes : [TreeNode]? = [TreeNode]()
-	@objc var childrenNodes: [TreeNode]?{
+	@objc public var childrenNodes: [TreeNode]?{
 		get{
 			return nodes
 		}
 	}
 	
-	init(name : String){
+	public init(name : String){
 		self._name = name
 	}
 	
-	@objc func addChildrenNode(node: TreeNode) {
+	@objc public func addChildrenNode(node: TreeNode) {
 		nodes?.append(node)
 	}
 	
-	@objc func addChildrensNode(nodes: [TreeNode]) {
+	@objc public func addChildrensNode(nodes: [TreeNode]) {
 		self.nodes?.appendContentsOf(nodes)
 	}
 	

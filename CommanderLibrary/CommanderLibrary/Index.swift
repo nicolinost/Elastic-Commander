@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Index : NSObject, TreeNode{
+public class Index : NSObject, TreeNode{
 	
 	private var _name : String = ""
-	var name : String {
+	public var name : String {
 		get{
 			return _name
 		}
@@ -20,25 +20,25 @@ class Index : NSObject, TreeNode{
 	var settings : Settings = Settings(name: "Settings")
 	var aliasName : String?
 	
-	var childrenCount: Int{
+	public var childrenCount: Int{
 		get{
 			return (childrenNodes != nil) ? childrenNodes!.count : 0
 		}
 	}
 	private var nodes : [TreeNode] = [TreeNode]()
-	var childrenNodes: [TreeNode]?{
+	public var childrenNodes: [TreeNode]?{
 		get{
 			return nodes as [TreeNode]
 		}
 	}
 	
-	init(name:String){
+	public init(name:String){
 		super.init()
 		self._name = name
 		addChildrenNode(settings)
 	}
 	
-	convenience init(name : String, mapping : Mapping?){
+	public convenience init(name : String, mapping : Mapping?){
 		self.init(name: name)
 		self.mapping = mapping
 		if mapping != nil {
@@ -46,17 +46,17 @@ class Index : NSObject, TreeNode{
 		}
 	}
 	
-	convenience init(name : String, mapping : Mapping?, aliasName : String){
+	public convenience init(name : String, mapping : Mapping?, aliasName : String){
 		self.init(name:name, mapping: mapping)
 		self.aliasName = aliasName
 	}
 	
 	
-	func addChildrenNode(node: TreeNode) {
+	public func addChildrenNode(node: TreeNode) {
 		self.nodes.append(node)
 	}
 	
-	func addChildrensNode(nodes: [TreeNode]) {
+	public func addChildrensNode(nodes: [TreeNode]) {
 		self.nodes.appendContentsOf(nodes)
 	}
 	

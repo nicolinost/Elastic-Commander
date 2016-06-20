@@ -9,7 +9,7 @@
 import Foundation
 
 
-@objc protocol TreeNode : AnyObject{
+@objc public protocol TreeNode : AnyObject{
 	var name : String {get}
 	var childrenNodes : [TreeNode]? {get}
 	var childrenCount : Int {get}

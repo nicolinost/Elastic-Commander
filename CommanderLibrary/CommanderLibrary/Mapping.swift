@@ -9,42 +9,42 @@
 import Foundation
 
 
-class Mapping : TreeNode{
+public class Mapping : TreeNode{
 	
 	private var _name = ""
-	@objc var name : String {
+	@objc public var name : String {
 		get {
 			return _name
 		}
 	}
-	@objc var childrenCount: Int{
+	@objc public var childrenCount: Int{
 		get{
 			return (childrenNodes != nil) ? childrenNodes!.count : 0
 		}
 	}
 	
 	private var nodes : [TreeNode]? = [TreeNode]()
-	@objc var childrenNodes: [TreeNode]?{
+	@objc public var childrenNodes: [TreeNode]?{
 		get{
 			return nodes
 		}
 	}
 	
-	init(name:String){
+	public init(name:String){
 		self._name = name
 	}
 	
-	convenience init(name : String, nodes : [TreeNode]){
+	public convenience init(name : String, nodes : [TreeNode]){
 		self.init(name:name)
 		self.nodes = nodes
 	}
 	
 	
-	@objc func addChildrenNode(node: TreeNode) -> Void {
+	@objc public func addChildrenNode(node: TreeNode) -> Void {
 		nodes?.append(node)
 	}
 	
-	@objc func addChildrensNode(nodes: [TreeNode]) -> Void{
+	@objc public func addChildrensNode(nodes: [TreeNode]) -> Void{
 		self.nodes?.appendContentsOf(nodes)
 	}
 }
