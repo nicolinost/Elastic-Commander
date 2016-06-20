@@ -12,6 +12,6 @@ public class ElasticsUtils{
 	
 	public static func getAllIndexFromElastic(host : String) -> [Index]{
 		
-	}
+	} 
 	
 }
