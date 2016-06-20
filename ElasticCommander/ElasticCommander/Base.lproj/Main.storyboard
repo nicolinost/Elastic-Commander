@@ -697,8 +697,8 @@
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
                             </box>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-Nv-cRU">
-                                <rect key="frame" x="8" y="2" width="19" height="21"/>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-Nv-cRU">
+                                <rect key="frame" x="5" y="2" width="19" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="19" id="HVQ-AC-uL5"/>
                                 </constraints>
@@ -707,7 +707,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="showAddContextualMenu:" target="1Cc-4Y-NlT" id="7FV-5d-ifW"/>
+                                    <action selector="showAddContextualMenu:" target="1Cc-4Y-NlT" id="l30-IF-b9c"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-nw-qXB">
@@ -736,8 +736,21 @@
                             <constraint firstItem="v1e-nw-qXB" firstAttribute="top" secondItem="Do0-db-cEZ" secondAttribute="bottom" constant="2" id="tBQ-Kq-rd2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addContextualMenu" destination="a1R-UN-r3G" id="hV8-Xh-ZfQ"/>
+                    </connections>
                 </viewController>
                 <customObject id="RdV-B2-LFB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu id="a1R-UN-r3G">
+                    <items>
+                        <menuItem title="Connection ..." id="LI5-A0-tRt">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="showAddConnectionSheet:" target="1Cc-4Y-NlT" id="w8V-xO-44y"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
             </objects>
             <point key="canvasLocation" x="-972" y="1356"/>
         </scene>

@@ -12,6 +12,8 @@ import Cocoa
 
 class ConnectionsMenuController : NSViewController{
 	
+	@IBOutlet var addContextualMenu: NSMenu!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	}
@@ -24,6 +26,12 @@ class ConnectionsMenuController : NSViewController{
 		self.view.hidden = false
 	}
 	
-	@IBAction func showAddContextualMenu(sender: AnyObject) {
+	
+	@IBAction func showAddContextualMenu(sender: NSButton) {
+		addContextualMenu.popUpMenuPositioningItem(nil, atLocation: NSEvent.mouseLocation(), inView: nil)
+	}
+	
+	@IBAction func showAddConnectionSheet(sender: AnyObject) {
+		
 	}
 }
