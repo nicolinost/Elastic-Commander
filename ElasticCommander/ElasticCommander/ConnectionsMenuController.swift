@@ -14,6 +14,8 @@ class ConnectionsMenuController : NSViewController{
 	
 	@IBOutlet var addContextualMenu: NSMenu!
 	
+	var addConnectionController : AddConnectionController?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	}

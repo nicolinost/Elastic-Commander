@@ -15,7 +15,8 @@
 		EB1849261CC18B720020E531 /* ElasticCommanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1849251CC18B720020E531 /* ElasticCommanderTests.swift */; };
 		EB3DEF361D1867A60080E2A8 /* CommanderLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3DEF351D1867A60080E2A8 /* CommanderLibrary.framework */; };
 		EB3DEF381D1867D70080E2A8 /* EditorCodeService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3DEF371D1867D70080E2A8 /* EditorCodeService.framework */; };
-		EB3DEF3B1D1884F50080E2A8 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3DEF3A1D1884F50080E2A8 /* Window.xib */; };
+		EB3DEF3B1D1884F50080E2A8 /* AddConnectionWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB3DEF3A1D1884F50080E2A8 /* AddConnectionWindow.xib */; };
+		EB8CCAC01D1B152B0025933D /* AddConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8CCABF1D1B152B0025933D /* AddConnectionController.swift */; };
 		EB90EBFD1CF4EC9500B58A39 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */; };
 		EB90EBFF1CF4EE6A00B58A39 /* QuerySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EBFE1CF4EE6A00B58A39 /* QuerySplitViewController.swift */; };
 		EB90EC011CF4EF6A00B58A39 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */; };
@@ -46,7 +47,8 @@
 		EB1849271CC18B730020E531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB3DEF351D1867A60080E2A8 /* CommanderLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommanderLibrary.framework; path = "../../../../../Users/nicolassterchele/Library/Developer/Xcode/DerivedData/CommanderSolution-fxcvggphfetnrnclcuyhqmiaixbb/Build/Products/Debug/CommanderLibrary.framework"; sourceTree = "<group>"; };
 		EB3DEF371D1867D70080E2A8 /* EditorCodeService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EditorCodeService.framework; path = ../EditorCodeService/build/Debug/EditorCodeService.framework; sourceTree = "<group>"; };
-		EB3DEF3A1D1884F50080E2A8 /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Window.xib; path = Storyboards/Window.xib; sourceTree = "<group>"; };
+		EB3DEF3A1D1884F50080E2A8 /* AddConnectionWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddConnectionWindow.xib; path = Storyboards/AddConnectionWindow.xib; sourceTree = "<group>"; };
+		EB8CCABF1D1B152B0025933D /* AddConnectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddConnectionController.swift; sourceTree = "<group>"; };
 		EB90EBFC1CF4EC9500B58A39 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		EB90EBFE1CF4EE6A00B58A39 /* QuerySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuerySplitViewController.swift; sourceTree = "<group>"; };
 		EB90EC001CF4EF6A00B58A39 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +122,7 @@
 		EB3DEF391D1884DC0080E2A8 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				EB3DEF3A1D1884F50080E2A8 /* Window.xib */,
+				EB3DEF3A1D1884F50080E2A8 /* AddConnectionWindow.xib */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -135,6 +137,7 @@
 				EB09C0301CFEFD5200DF3ACE /* ConnectionsMenuController.swift */,
 				EB09C0321CFF00C400DF3ACE /* GeneralSplitViewController.swift */,
 				EBAC323A1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift */,
+				EB8CCABF1D1B152B0025933D /* AddConnectionController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -229,7 +232,7 @@
 			files = (
 				EB1849181CC18B720020E531 /* Assets.xcassets in Resources */,
 				EB18491B1CC18B720020E531 /* Main.storyboard in Resources */,
-				EB3DEF3B1D1884F50080E2A8 /* Window.xib in Resources */,
+				EB3DEF3B1D1884F50080E2A8 /* AddConnectionWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +254,7 @@
 				EB90EBFD1CF4EC9500B58A39 /* WindowController.swift in Sources */,
 				EB90EC031CF4EF9F00B58A39 /* QueryResultViewController.swift in Sources */,
 				EB1849141CC18B720020E531 /* AppDelegate.swift in Sources */,
+				EB8CCAC01D1B152B0025933D /* AddConnectionController.swift in Sources */,
 				EBAC323B1D0F4D3D000A7EF7 /* ConnectionOutlineViewController.swift in Sources */,
 				EB09C0311CFEFD5200DF3ACE /* ConnectionsMenuController.swift in Sources */,
 				EB90EBFF1CF4EE6A00B58A39 /* QuerySplitViewController.swift in Sources */,
