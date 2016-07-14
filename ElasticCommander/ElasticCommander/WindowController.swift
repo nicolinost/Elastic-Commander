@@ -34,7 +34,8 @@ class WindowController : NSWindowController{
 		do{
 			try Networks.SendAndReceiveDatas(request, callBack: {(data) in
 				NSOperationQueue.mainQueue().addOperationWithBlock({
-					self.splitViewController.querySplitView.setQueryResult((data as! String))
+					let queryIndented = SyntaxUtils.IndentJson(data as! String)
+					self.splitViewController.querySplitView.setQueryResult(queryIndented)
 				})
 			})
 		}
