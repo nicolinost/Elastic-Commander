@@ -9,10 +9,10 @@
 import Foundation
 
 public class Request<T:AnyObject>{
-	var endPoint:String="";
-	var httpVerb:String="";
-	var api:String="";
-	var body: T?;
+	public var endPoint:String="";
+	public var httpVerb:String="";
+	public var api:String="";
+	public var body: T?;
 	
 	var completeUrl:String {
 		get{
