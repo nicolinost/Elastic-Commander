@@ -29,7 +29,7 @@ class WindowController : NSWindowController{
 	
 	@IBAction func SendAction(sender: NSButton) {
 		
-		let request = Request<NSString>(host: self.urlToSend.stringValue, httpVerb: "GET", api: "/", body: self.splitViewController.getQuery());
+		let request = Request(host: self.urlToSend.stringValue, httpVerb: "GET", api: "/", body: self.splitViewController.getQuery());
 		
 		do{
 			try Networks.SendAndReceiveDatas(request, callBack: {(data) in

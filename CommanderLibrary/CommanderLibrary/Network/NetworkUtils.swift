@@ -11,7 +11,7 @@ import Foundation
 public class Networks {
 	
 	
-	public static func SendAndReceiveDatas<T:AnyObject>(request:Request<T>, callBack:(AnyObject)->()) throws  ->Void{
+	public static func SendAndReceiveDatas(request:Request, callBack:(AnyObject)->()) throws  ->Void{
 		guard let url = NSURL(string:request.completeUrl) else {
 			print("Error: cannot create URL");
 			throw NetworkError.WrongUrl;
@@ -25,12 +25,19 @@ public class Networks {
 		}
 		if(httpMethod != "GET"){
 			urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-			guard let httpBody = request.SerializeBody() else{
-				throw NetworkError.NoBody;
-			}
+			//			if NSJSONSerialization.isValidJSONObject(request.body!) {
+			//    guard let httpBody = request.SerializeBody() else{
+			//		throw NetworkError.NoBody;
+			//				}
+			//urlRequest.HTTPBody = httpBody
+			urlRequest.HTTPBody = request.body?.dataUsingEncoding(NSUTF8StringEncoding)
+			//}
+			/*	guard let httpBody = request.SerializeBody() else{
+			throw NetworkError.NoBody;
+			
 			urlRequest.HTTPBody = httpBody
+			}*/
 		}
-		
 		urlRequest.HTTPMethod = httpMethod;
 		let config = NSURLSessionConfiguration.defaultSessionConfiguration();
 		let session = NSURLSession(configuration: config);
