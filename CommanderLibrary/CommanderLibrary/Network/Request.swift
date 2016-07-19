@@ -8,11 +8,11 @@
 
 import Foundation
 
-public class Request<T:AnyObject>{
+public class Request{
 	public var endPoint:String="";
 	public var httpVerb:String="";
 	public var api:String="";
-	public var body: T?;
+	public var body: String?;
 	
 	var completeUrl:String {
 		get{
@@ -20,7 +20,7 @@ public class Request<T:AnyObject>{
 		}
 	}
 	
-	public init(host:String,httpVerb:String, api:String, body:T?){
+	public init(host:String,httpVerb:String, api:String, body:String?){
 		self.endPoint = host;
 		self.httpVerb = httpVerb;
 		self.api = api;
@@ -29,7 +29,7 @@ public class Request<T:AnyObject>{
 	
 	public func SerializeBody()->NSData?{
 		do{
-			let httpBody = try NSJSONSerialization.dataWithJSONObject(body!, options: NSJSONWritingOptions());
+			let httpBody = try NSJSONSerialization.dataWithJSONObject(self.body!, options: NSJSONWritingOptions());
 			return httpBody;
 		}
 		catch{
