@@ -102,7 +102,76 @@ public class SyntaxUtils{
 		}
 		
 		return result
+	}
+	
+	
+	public static func ExtractQueryBlocksFromString(str:String)-> Array<QueryBlock>{
 		
+		var index = 0
+		let unicode = str.unicodeScalars
+		var myQueryBlocksArray = Array<QueryBlock>()
+		
+		repeat{
+			let char = unicode[unicode.startIndex.advancedBy(index)]
+			
+			switch char {
+			case "{":
+				var queryPosition = GetQueryPositionFromStartIndex(str, startIndex: index)
+				myQueryBlocksArray.append(GenerateQueryBlockFromPositions(str, blockPosition: queryPosition))
+				index = queryPosition.endPosition
+				break
+			default:
+				break
+			}
+			
+			index += 1
+			
+		} while index < str.characters.count
+		
+		
+		return myQueryBlocksArray
+	}
+	
+	private static func GenerateQueryBlockFromPositions(str:String, blockPosition:BlockPosition) -> QueryBlock{
+		
+		var query = str.substringWithRange(Range<String.Index>(start: str.startIndex.advancedBy(blockPosition.startPosition), end: str.startIndex.advancedBy(blockPosition.endPosition)))
+		
+		return QueryBlock(queryString: query,header: nil, queryPosition: blockPosition)
+	}
+	
+	private static func GetQueryPositionFromStartIndex(query:String, startIndex:Int) -> BlockPosition{
+		
+		var index = startIndex
+		var offset = 0
+		let unicode = query.unicodeScalars
+		
+		var curlyBracketsCount = 0
+		
+		repeat{
+			let char = unicode[unicode.startIndex.advancedBy(index)]
+			
+			switch char {
+			case "{":
+				curlyBracketsCount += 1
+				break
+			case "}":
+				curlyBracketsCount -= 1
+				if curlyBracketsCount == 0{
+					return BlockPosition(startPosition: startIndex, endPosition: index)
+				}
+			default:
+				break
+			}
+			
+			index += 1
+			
+		} while index < query.characters.count || curlyBracketsCount == 0
+		
+		return BlockPosition(startPosition: startIndex, endPosition: index)
+	}
+	
+	private static func GenerateBlockHeaderFromPosition(str:String, index:Int)-> BlockHeader{
+		//Extract http verb and api path
 	}
 	
 }

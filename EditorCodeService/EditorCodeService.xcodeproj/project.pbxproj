@@ -13,6 +13,7 @@
 		EB195FE01CB7799700F029AE /* EditorCodeService.h in Headers */ = {isa = PBXBuildFile; fileRef = EB195FDF1CB7799700F029AE /* EditorCodeService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB195FE71CB7799700F029AE /* EditorCodeService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB195FDC1CB7799700F029AE /* EditorCodeService.framework */; };
 		EB195FEC1CB7799700F029AE /* EditorCodeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB195FEB1CB7799700F029AE /* EditorCodeServiceTests.swift */; };
+		EBC85EA51D42A65C000602FB /* QueryBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC85EA41D42A65C000602FB /* QueryBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		EB195FE61CB7799700F029AE /* EditorCodeServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditorCodeServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB195FEB1CB7799700F029AE /* EditorCodeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCodeServiceTests.swift; sourceTree = "<group>"; };
 		EB195FED1CB7799700F029AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC85EA41D42A65C000602FB /* QueryBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryBlock.swift; path = Query/QueryBlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		EB1802D71CBEDF0600F03400 /* Query */ = {
 			isa = PBXGroup;
 			children = (
+				EBC85EA41D42A65C000602FB /* QueryBlock.swift */,
 			);
 			name = Query;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1929B51D03305900281E38 /* SyntaxUtils.swift in Sources */,
+				EBC85EA51D42A65C000602FB /* QueryBlock.swift in Sources */,
 				EB1849041CC0B42C0020E531 /* ParserUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

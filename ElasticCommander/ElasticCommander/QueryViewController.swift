@@ -8,6 +8,7 @@
 
 import Foundation
 import Cocoa
+import EditorCodeService
 
 
 class QueryViewController : NSViewController{
@@ -19,6 +20,7 @@ class QueryViewController : NSViewController{
 		let font = NSFont(name: "Menlo", size: 12)
 		queryEditor.font = font
 		queryEditor.textColor = NSColor.blueColor()
+		queryEditor.automaticQuoteSubstitutionEnabled = false
 	}
 	
 	func setQuery(newQuery : String)->Void{
@@ -26,7 +28,10 @@ class QueryViewController : NSViewController{
 	}
 	
 	func getQuery() -> String {
-		return ((queryEditor.textStorage)?.string)!
+		let queryEditorText = queryEditor.textStorage?.string
+		let testQueryBlocks = SyntaxUtils.ExtractQueryBlocksFromString(queryEditorText!)
+		
+		return (queryEditor.textStorage?.string)!
 	}
 	
 }
