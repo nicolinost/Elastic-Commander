@@ -134,9 +134,9 @@ public class SyntaxUtils{
 	
 	private static func GenerateQueryBlockFromPositions(str:String, blockPosition:BlockPosition) -> QueryBlock{
 		
-		var query = str.substringWithRange(Range<String.Index>(start: str.startIndex.advancedBy(blockPosition.startPosition), end: str.startIndex.advancedBy(blockPosition.endPosition)))
+		var query = str.substringWithRange(Range<String.Index>(start: str.startIndex.advancedBy(blockPosition.startPosition), end: str.startIndex.advancedBy(blockPosition.endPosition+1)))
 		
-		return QueryBlock(queryString: query,header: nil, queryPosition: blockPosition)
+		return QueryBlock(queryString: query,header: BlockHeader(httpVerb:"POST",apiPath: ""), queryPosition: blockPosition)
 	}
 	
 	private static func GetQueryPositionFromStartIndex(query:String, startIndex:Int) -> BlockPosition{
@@ -170,8 +170,8 @@ public class SyntaxUtils{
 		return BlockPosition(startPosition: startIndex, endPosition: index)
 	}
 	
-	private static func GenerateBlockHeaderFromPosition(str:String, index:Int)-> BlockHeader{
-		//Extract http verb and api path
-	}
+	//private static func GenerateBlockHeaderFromPosition(str:String, index:Int)-> BlockHeader{
+	//Extract http verb and api path
+	//}
 	
 }

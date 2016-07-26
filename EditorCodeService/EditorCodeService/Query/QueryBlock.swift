@@ -31,9 +31,9 @@ public struct BlockHeader {
 
 public class QueryBlock{
 	
-	var queryString : String
-	var header : BlockHeader
-	var queryPosition : BlockPosition
+	public var queryString : String
+	public var header : BlockHeader
+	public var queryPosition : BlockPosition
 	
 	init(queryString : String, header : BlockHeader, queryPosition : BlockPosition){
 		self.queryString = queryString

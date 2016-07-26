@@ -31,7 +31,8 @@ class QueryViewController : NSViewController{
 		let queryEditorText = queryEditor.textStorage?.string
 		let testQueryBlocks = SyntaxUtils.ExtractQueryBlocksFromString(queryEditorText!)
 		
-		return (queryEditor.textStorage?.string)!
+		return testQueryBlocks[0].queryString
+		//return (queryEditor.textStorage?.string)!
 	}
 	
 }

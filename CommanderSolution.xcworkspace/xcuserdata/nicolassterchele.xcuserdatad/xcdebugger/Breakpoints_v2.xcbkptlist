@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElasticCommander/ElasticCommander/QueryViewController.swift"
-            timestampString = "490911193.286612"
+            timestampString = "491258553.360008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "getQuery()"
             landmarkType = "5">
          </BreakpointContent>
