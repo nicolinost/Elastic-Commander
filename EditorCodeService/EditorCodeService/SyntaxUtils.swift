@@ -110,6 +110,7 @@ public class SyntaxUtils{
 		var index = 0
 		let unicode = str.unicodeScalars
 		var myQueryBlocksArray = Array<QueryBlock>()
+		var myHeader : BlockHeader
 		
 		repeat{
 			let char = unicode[unicode.startIndex.advancedBy(index)]
@@ -117,10 +118,13 @@ public class SyntaxUtils{
 			switch char {
 			case "{":
 				var queryPosition = GetQueryPositionFromStartIndex(str, startIndex: index)
-				myQueryBlocksArray.append(GenerateQueryBlockFromPositions(str, blockPosition: queryPosition))
+				myQueryBlocksArray.append(GenerateQueryBlockFromPosition(str, blockPosition: &queryPosition))
 				index = queryPosition.endPosition
 				break
 			default:
+				var myBlockPosition = BlockPosition(startPosition: index, endPosition: 0)
+				myHeader = GenerateBlockHeaderFromPosition(str, blockPosition: &myBlockPosition)
+				index = myBlockPosition.endPosition
 				break
 			}
 			
@@ -132,11 +136,11 @@ public class SyntaxUtils{
 		return myQueryBlocksArray
 	}
 	
-	private static func GenerateQueryBlockFromPositions(str:String, blockPosition:BlockPosition) -> QueryBlock{
+	private static func GenerateQueryBlockFromPosition(str:String, inout blockPosition:BlockPosition) -> QueryBlock{
 		
 		var query = str.substringWithRange(Range<String.Index>(start: str.startIndex.advancedBy(blockPosition.startPosition), end: str.startIndex.advancedBy(blockPosition.endPosition+1)))
 		
-		return QueryBlock(queryString: query,header: BlockHeader(httpVerb:"POST",apiPath: ""), queryPosition: blockPosition)
+		return QueryBlock(queryString: query,header: GenerateBlockHeaderFromPosition(query,blockPosition: &blockPosition), queryPosition: blockPosition)
 	}
 	
 	private static func GetQueryPositionFromStartIndex(query:String, startIndex:Int) -> BlockPosition{
@@ -170,8 +174,19 @@ public class SyntaxUtils{
 		return BlockPosition(startPosition: startIndex, endPosition: index)
 	}
 	
-	//private static func GenerateBlockHeaderFromPosition(str:String, index:Int)-> BlockHeader{
-	//Extract http verb and api path
-	//}
+	private static func GenerateBlockHeaderFromPosition(str:String, inout blockPosition:BlockPosition)-> BlockHeader{
+		//Extract http verb and api path
+		let unicode = str.unicodeScalars
+		var i = blockPosition.startPosition
+		
+		repeat{
+			i += 1
+		}while unicode[unicode.startIndex.advancedBy(i)] != "{"
+		
+		let apiPath = str.substringWithRange(Range<String.Index>(start: str.startIndex.advancedBy(blockPosition.startPosition), end: str.startIndex.advancedBy(i)))
+		
+		blockPosition.endPosition = i
+		return BlockHeader(httpVerb: "", apiPath: apiPath)
+	}
 	
 }
