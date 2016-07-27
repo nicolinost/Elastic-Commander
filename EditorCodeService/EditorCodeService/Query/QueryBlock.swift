@@ -13,6 +13,10 @@ public struct BlockPosition {
 	var startPosition = 0
 	var endPosition = 0
 	
+	init(){
+		
+	}
+	
 	init(startPosition:Int, endPosition:Int){
 		self.startPosition = startPosition
 		self.endPosition = endPosition
@@ -20,8 +24,12 @@ public struct BlockPosition {
 }
 
 public struct BlockHeader {
-	var httpVerb : String
-	var apiPath : String
+	public var httpVerb : String = ""
+	public var apiPath : String = ""
+	
+	init(){
+		
+	}
 	
 	init(httpVerb:String, apiPath:String){
 		self.httpVerb = httpVerb
@@ -31,11 +39,24 @@ public struct BlockHeader {
 
 public class QueryBlock{
 	
-	public var queryString : String
-	public var header : BlockHeader
-	public var queryPosition : BlockPosition
+	public var queryString : String?
+	public var header : BlockHeader = BlockHeader()
+	public var queryPosition : BlockPosition = BlockPosition()
 	
-	init(queryString : String, header : BlockHeader, queryPosition : BlockPosition){
+	
+	init(){
+		
+	}
+	
+	convenience init(queryString : String, queryPosition : BlockPosition){
+		self.init()
+		self.queryString = queryString
+		self.queryPosition = queryPosition
+	}
+	
+	convenience init(queryString : String, header : BlockHeader, queryPosition : BlockPosition){
+		self.init()
+		
 		self.queryString = queryString
 		self.header = header
 		self.queryPosition = queryPosition

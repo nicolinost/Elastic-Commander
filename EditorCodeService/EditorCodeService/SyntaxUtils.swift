@@ -110,7 +110,8 @@ public class SyntaxUtils{
 		var index = 0
 		let unicode = str.unicodeScalars
 		var myQueryBlocksArray = Array<QueryBlock>()
-		var myHeader : BlockHeader
+		var myHeader  = BlockHeader()
+		var myQueryBlock = QueryBlock()
 		
 		repeat{
 			let char = unicode[unicode.startIndex.advancedBy(index)]
@@ -118,12 +119,17 @@ public class SyntaxUtils{
 			switch char {
 			case "{":
 				var queryPosition = GetQueryPositionFromStartIndex(str, startIndex: index)
-				myQueryBlocksArray.append(GenerateQueryBlockFromPosition(str, blockPosition: &queryPosition))
+				myQueryBlock = GenerateQueryBlockFromPosition(str, blockPosition: &queryPosition)
+				myQueryBlock.header = myHeader
+				myQueryBlocksArray.append(myQueryBlock)
 				index = queryPosition.endPosition
+				myHeader = BlockHeader()
+				myQueryBlock = QueryBlock()
 				break
 			default:
 				var myBlockPosition = BlockPosition(startPosition: index, endPosition: 0)
 				myHeader = GenerateBlockHeaderFromPosition(str, blockPosition: &myBlockPosition)
+				myQueryBlock.header = myHeader
 				index = myBlockPosition.endPosition
 				break
 			}
@@ -132,6 +138,9 @@ public class SyntaxUtils{
 			
 		} while index < str.characters.count
 		
+		if myQueryBlock.queryString == nil && myHeader.apiPath != "" {
+			myQueryBlocksArray.append(myQueryBlock)
+		}
 		
 		return myQueryBlocksArray
 	}
@@ -140,7 +149,7 @@ public class SyntaxUtils{
 		
 		var query = str.substringWithRange(Range<String.Index>(start: str.startIndex.advancedBy(blockPosition.startPosition), end: str.startIndex.advancedBy(blockPosition.endPosition+1)))
 		
-		return QueryBlock(queryString: query,header: GenerateBlockHeaderFromPosition(query,blockPosition: &blockPosition), queryPosition: blockPosition)
+		return QueryBlock(queryString: query, queryPosition: blockPosition)
 	}
 	
 	private static func GetQueryPositionFromStartIndex(query:String, startIndex:Int) -> BlockPosition{
@@ -181,12 +190,16 @@ public class SyntaxUtils{
 		
 		repeat{
 			i += 1
-		}while unicode[unicode.startIndex.advancedBy(i)] != "{"
+		}while i < str.characters.count && unicode[unicode.startIndex.advancedBy(i)] != "{"
 		
-		let apiPath = str.substringWithRange(Range<String.Index>(start: str.startIndex.advancedBy(blockPosition.startPosition), end: str.startIndex.advancedBy(i)))
+		var fullPath = str.substringWithRange(Range<String.Index>(start: str.startIndex.advancedBy(blockPosition.startPosition), end: str.startIndex.advancedBy(i)))
 		
-		blockPosition.endPosition = i
-		return BlockHeader(httpVerb: "", apiPath: apiPath)
+		fullPath = fullPath.stringByReplacingOccurrencesOfString("\n", withString: "")
+		
+		let separatePath = fullPath.componentsSeparatedByString(" ")
+		
+		blockPosition.endPosition = i - 1
+		return BlockHeader(httpVerb: separatePath[0], apiPath: separatePath[1])
 	}
 	
 }

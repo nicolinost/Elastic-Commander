@@ -8,6 +8,7 @@
 
 import Foundation
 import Cocoa
+import EditorCodeService
 
 class GeneralSplitViewController : NSSplitViewController{
 	
@@ -33,8 +34,8 @@ class GeneralSplitViewController : NSSplitViewController{
 		querySplitView.setQuery(newQuery)
 	}
 	
-	func getQuery() -> String? {
-		return querySplitView.getQuery()
+	func getQuery(whichOne:Int) -> QueryBlock? {
+		return querySplitView.getQuery(whichOne)
 	}
 	
 	func ToggleMenu() -> Void {

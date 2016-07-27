@@ -8,7 +8,7 @@
 
 import Foundation
 import Cocoa
-
+import EditorCodeService
 
 class QuerySplitViewController : NSSplitViewController{
 	
@@ -26,12 +26,8 @@ class QuerySplitViewController : NSSplitViewController{
 		return queryResultView.viewController as! QueryResultViewController
 	}
 	
-	func getQuery() -> String? {
-		let query = queryViewController.getQuery()
-		if(query == ""){
-			return nil
-		}
-		return query
+	func getQuery(whichOne:Int) -> QueryBlock? {
+		return queryViewController.getQuery(whichOne)
 	}
 	
 	func setQuery(newQuery : String) -> Void{

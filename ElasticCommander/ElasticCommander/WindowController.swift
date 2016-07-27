@@ -28,8 +28,8 @@ class WindowController : NSWindowController{
 	
 	
 	@IBAction func SendAction(sender: NSButton) {
-		
-		let request = Request(host: self.urlToSend.stringValue, httpVerb: "GET", api: "/", body: self.splitViewController.getQuery());
+		let myQueryBlock = self.splitViewController.getQuery(0)
+		let request = Request(host: self.urlToSend.stringValue, httpVerb: (myQueryBlock?.header.httpVerb)!, api: (myQueryBlock?.header.apiPath)!, body:myQueryBlock?.queryString )
 		
 		do{
 			try Networks.SendAndReceiveDatas(request, callBack: {(data) in
@@ -57,7 +57,8 @@ class WindowController : NSWindowController{
 	
 	@IBAction func IndentQuery(sender: AnyObject) {
 		NSOperationQueue.mainQueue().addOperationWithBlock({
-			let queryIndented = SyntaxUtils.IndentJson(self.splitViewController.getQuery()!)
+			let myQueryBlock = self.splitViewController.getQuery(0)
+			let queryIndented = SyntaxUtils.IndentJson((myQueryBlock?.queryString)!)
 			self.splitViewController.setQuery(queryIndented)
 		})
 	}
